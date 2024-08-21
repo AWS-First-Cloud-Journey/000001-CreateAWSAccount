@@ -2,12 +2,16 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <sitemap>
-    <loc>en/sitemap.xml</loc>
+    <loc>/en/sitemap.xml</loc>
+    
+      <lastmod>1969-12-31T16:33:44-08:00</lastmod>
     
   </sitemap>
   
   <sitemap>
-    <loc>vi/sitemap.xml</loc>
+    <loc>/vi/sitemap.xml</loc>
+    
+      <lastmod>1969-12-31T16:33:44-08:00</lastmod>
     
   </sitemap>
   

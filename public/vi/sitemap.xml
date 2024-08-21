@@ -2,6 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/vi/5-explore-and-configure-the-aws-management-console/5.1-config-default-region/</loc>
+    <lastmod>1969-12-31T16:33:44-08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-explore-and-configure-the-aws-management-console/5.1-config-default-region/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-explore-and-configure-the-aws-management-console/5.1-config-default-region/"
+                />
+  </url><url>
+    <loc>/vi/</loc>
+    <lastmod>1969-12-31T16:33:41-08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/"
+                />
+  </url><url>
     <loc>/vi/1-create-new-aws-account/</loc>
     <xhtml:link
                 rel="alternate"
@@ -26,16 +52,17 @@
                 href="/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/"
                 />
   </url><url>
-    <loc>/vi/</loc>
+    <loc>/vi/5-explore-and-configure-the-aws-management-console/5.2-search-with-the-aws-management-console/</loc>
+    <lastmod>1969-12-31T16:33:44-08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="/5-explore-and-configure-the-aws-management-console/5.2-search-with-the-aws-management-console/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/"
+                href="/vi/5-explore-and-configure-the-aws-management-console/5.2-search-with-the-aws-management-console/"
                 />
   </url><url>
     <loc>/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/</loc>
@@ -62,6 +89,19 @@
                 href="/vi/2-mfa-setup-for-aws-user-root/"
                 />
   </url><url>
+    <loc>/vi/5-explore-and-configure-the-aws-management-console/5.3-add-and-remove-favorites/</loc>
+    <lastmod>1969-12-31T16:33:44-08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-explore-and-configure-the-aws-management-console/5.3-add-and-remove-favorites/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-explore-and-configure-the-aws-management-console/5.3-add-and-remove-favorites/"
+                />
+  </url><url>
     <loc>/vi/3-create-admin-user-and-group/</loc>
     <xhtml:link
                 rel="alternate"
@@ -86,6 +126,19 @@
                 href="/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/"
                 />
   </url><url>
+    <loc>/vi/5-explore-and-configure-the-aws-management-console/5.4create-and-use-dashboard-widgets/</loc>
+    <lastmod>1969-12-31T16:33:44-08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-explore-and-configure-the-aws-management-console/5.4create-and-use-dashboard-widgets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-explore-and-configure-the-aws-management-console/5.4create-and-use-dashboard-widgets/"
+                />
+  </url><url>
     <loc>/vi/4-verify-new-account/</loc>
     <xhtml:link
                 rel="alternate"
@@ -96,6 +149,19 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/4-verify-new-account/"
+                />
+  </url><url>
+    <loc>/vi/5-explore-and-configure-the-aws-management-console/</loc>
+    <lastmod>1969-12-31T16:33:44-08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-explore-and-configure-the-aws-management-console/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-explore-and-configure-the-aws-management-console/"
                 />
   </url><url>
     <loc>/vi/categories/</loc>
