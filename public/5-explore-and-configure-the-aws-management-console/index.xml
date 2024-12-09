@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Explore and Configure AWS Management Console on Create a new AWS account.</title>
-    <link>/5-explore-and-configure-the-aws-management-console/</link>
+    <link>//localhost:1313/5-explore-and-configure-the-aws-management-console/</link>
     <description>Recent content in Explore and Configure AWS Management Console on Create a new AWS account.</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 01 Jan 1970 07:33:44 +0700</lastBuildDate>
-    <atom:link href="/5-explore-and-configure-the-aws-management-console/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/5-explore-and-configure-the-aws-management-console/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Set Up Default Region</title>
-      <link>/5-explore-and-configure-the-aws-management-console/5.1-config-default-region/</link>
+      <link>//localhost:1313/5-explore-and-configure-the-aws-management-console/5.1-config-default-region/</link>
       <pubDate>Thu, 01 Jan 1970 07:33:44 +0700</pubDate>
-      <guid>/5-explore-and-configure-the-aws-management-console/5.1-config-default-region/</guid>
+      <guid>//localhost:1313/5-explore-and-configure-the-aws-management-console/5.1-config-default-region/</guid>
       <description>Set up Default Region In this step, we will select a specific AWS Region to manage resources! With Region being a collection of AWS resources located in the same geographic area.&#xA;In the example in the image below, we are in Region Virginia (us-east-1)&#xA;However, our customers are usually end users in Vietnam, so the nearest Region will be Singapore (ap-southeast-1) to reduce latency&#xA;Perform Region conversion Click on the triangle symbol in Region Virginia (us-east-1) Select Region Singapore (ap-southeast-1) The result displayed on the navigation bar is Region Singapore (ap-southeast-1) In addition, to ensure that we are always present in the correct Region that matches the organization&amp;rsquo;s requirements every time we log in to the AWS console, setting up a default Region is essential.</description>
     </item>
     <item>
       <title>Search with the AWS Management Console</title>
-      <link>/5-explore-and-configure-the-aws-management-console/5.2-search-with-the-aws-management-console/</link>
+      <link>//localhost:1313/5-explore-and-configure-the-aws-management-console/5.2-search-with-the-aws-management-console/</link>
       <pubDate>Thu, 01 Jan 1970 07:33:44 +0700</pubDate>
-      <guid>/5-explore-and-configure-the-aws-management-console/5.2-search-with-the-aws-management-console/</guid>
+      <guid>//localhost:1313/5-explore-and-configure-the-aws-management-console/5.2-search-with-the-aws-management-console/</guid>
       <description>Search with the AWS Management Console In this lab, we explore the search box on the navigation bar, the search box that provides a search engine for AWS services and features, documentation, and the AWS Marketplace.&#xA;To open the console for a service, we will use the search box in the navigation bar of the AWS Management Console and enter the service name, for example: EC2 Then, select the EC2 service Result: The EC2 console page is displayed Select the AWS logo displayed in the upper left corner to return to the console home page.</description>
     </item>
     <item>
       <title>Add and Remove Favorite AWS Services</title>
-      <link>/5-explore-and-configure-the-aws-management-console/5.3-add-and-remove-favorites/</link>
+      <link>//localhost:1313/5-explore-and-configure-the-aws-management-console/5.3-add-and-remove-favorites/</link>
       <pubDate>Thu, 01 Jan 1970 07:33:44 +0700</pubDate>
-      <guid>/5-explore-and-configure-the-aws-management-console/5.3-add-and-remove-favorites/</guid>
+      <guid>//localhost:1313/5-explore-and-configure-the-aws-management-console/5.3-add-and-remove-favorites/</guid>
       <description>Add And Remove Favorites In this lab, we will explore the AWS Management Console to add AWS services to the favorites list and remove added services from the favorites list.&#xA;Add a service to the favorites list On the navigation bar, select Services to open the full list of services. Select All services&#xA;Select the &amp;ldquo;scroll bar&amp;rdquo; on the right to move up and down to search for the service.</description>
     </item>
     <item>
       <title>Create and use dashboard widgets</title>
-      <link>/5-explore-and-configure-the-aws-management-console/5.4create-and-use-dashboard-widgets/</link>
+      <link>//localhost:1313/5-explore-and-configure-the-aws-management-console/5.4create-and-use-dashboard-widgets/</link>
       <pubDate>Thu, 01 Jan 1970 07:33:44 +0700</pubDate>
-      <guid>/5-explore-and-configure-the-aws-management-console/5.4create-and-use-dashboard-widgets/</guid>
+      <guid>//localhost:1313/5-explore-and-configure-the-aws-management-console/5.4create-and-use-dashboard-widgets/</guid>
       <description>Create and use dashboard widgets In this lab, let&amp;rsquo;s explore &amp;ldquo;widgets&amp;rdquo; that display important information about our AWS environment and provide shortcuts to AWS services.&#xA;We can customize our experience by adding and removing these widgets, rearranging them, or resizing them to a custom size&#xA;Select the AWS logo in the left corner of the screen to return to Console Home&#xA;To add widgets, select the + Add widgets icon in the right corner of the screen The Add widgets window is displayed on the right side of the screen In the Add widgets menu, select the title bar we want to add, then drag that widget onto the console.</description>
     </item>
   </channel>
