@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.131.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo Admin Group và Admin User :: Tạo mới tài khoản AWS</title>
 
     
-    <link href="/css/nucleus.css?1734664421" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1734664421" rel="stylesheet">
-    <link href="/css/hybrid.css?1734664421" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1734664421" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1734664421" rel="stylesheet">
-    <link href="/css/auto-complete.css?1734664421" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1734664421" rel="stylesheet">
-    <link href="/css/theme.css?1734664421" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1734664421" rel="stylesheet">
+    <link href="/css/nucleus.css?1734689403" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1734689403" rel="stylesheet">
+    <link href="/css/hybrid.css?1734689403" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1734689403" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1734689403" rel="stylesheet">
+    <link href="/css/auto-complete.css?1734689403" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1734689403" rel="stylesheet">
+    <link href="/css/theme.css?1734689403" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1734689403" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1734664421" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1734689403" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1734664421"></script>
+    <script src="/js/jquery-3.3.1.min.js?1734689403"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1734664421"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1734664421"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1734689403"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1734689403"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1734664421"></script>
+<script type="text/javascript" src="/js/search.js?1734689403"></script>
 
     
   </div>
@@ -231,7 +231,7 @@
   
     
     <li data-nav-id="/vi/3-create-admin-user-and-group/" title="Tạo Admin Group và Admin User" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -547,23 +547,9 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#tạo-admin-group">Tạo Admin Group</a></li>
-    <li><a href="#tạo-admin-user">Tạo Admin User</a></li>
-  </ul>
-
-  <ul>
     <li>
       <ul>
         <li></li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#tạo-khóa-truy-cập-access-key-cho-tài-khoản-root-user-trên-aws">Tạo khóa truy cập (access key) cho tài khoản root user trên AWS</a></li>
-        <li><a href="#xóa-một-khóa-truy-cập-cho-người-dùng-gốc-trên-aws">Xóa một khóa truy cập cho người dùng gốc trên AWS</a></li>
       </ul>
     </li>
   </ul>
@@ -591,192 +577,233 @@
 
 
 
-	<h2 id="tạo-admin-group">Tạo Admin Group</h2>
+	<h4 id="tạo-admin-group">Tạo Admin Group</h4>
 <ol>
 <li>
-<p><strong>Đăng nhập vào Bảng điều khiển</strong> ở trang <a href="https://aws.amazon.com/">AWS Web Service page</a></p>
+<p>Đăng nhập vào AWS Management Console tại <a href="https://aws.amazon.com/">https://aws.amazon.com/</a></p>
 </li>
 <li>
 <p>Nhấn vào tên tài khoản ở góc trên bên phải và chọn <strong>My Security Credentials</strong></p>
-<p><img src="/images/01/0001.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<p><img alt="Truy cập Security Credentials" src="/images/01/0001.png"></p>
 <blockquote>
-<p><strong>Lưu ý:</strong> Trong trường hợp không thấy menu <strong>My Security Credentials</strong>, bạn có thể click vào biểu tượng tìm kiếm và điền <strong>IAM</strong>. Sau đó click vào dịch vụ IAM để truy cập vào giao diện quản lý dịch vụ IAM.</p>
+<p><strong>Lưu ý:</strong> Nếu không thấy menu <strong>My Security Credentials</strong>, bạn có thể tìm kiếm và chọn dịch vụ <strong>IAM</strong> để truy cập vào IAM console.</p>
 </blockquote>
-<p><img src="/images/01/0002.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<p><img alt="Tìm kiếm dịch vụ IAM" src="/images/01/0002.png"></p>
 </li>
 <li>
-<p>Ở thanh bên trái, chọn <strong>User Groups</strong> sau đó chọn <strong>Create Group</strong></p>
-<p><img src="/images/01/0003.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<p>Trong navigation pane bên trái, chọn <strong>User Groups</strong> và nhấn <strong>Create Group</strong></p>
+<p><img alt="Tạo User Group" src="/images/01/0003.png"></p>
 </li>
 <li>
-<p>Dưới mục <strong>Name the group</strong>, nhập tên Group (Ví dụ: <em>AdminGroup</em>) và cuộn chuột xuống dưới</p>
-<p><img src="/images/01/0004.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<p>Trong mục <strong>User group name</strong>, nhập tên group (ví dụ: <em>AdminGroup</em>)</p>
+<p><img alt="Đặt tên User Group" src="/images/01/0004.png"></p>
 </li>
 <li>
-<p>Ở phần <strong>Attach permissions policies</strong>, gõ <strong>AdministratorAccesss</strong> vào thanh tìm kiếm và nhấn chọn nó. Cuối cùng, chọn <strong>Create Group</strong>.</p>
-<p><img src="/images/01/0005.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<p>Trong phần <strong>Attach permissions policies</strong>, tìm và chọn policy <strong>AdministratorAccess</strong>. Sau đó chọn <strong>Create Group</strong></p>
+<p><img alt="Gán permissions" src="/images/01/0005.png"></p>
 </li>
 <li>
-<p>Hoàn thành tạo admin group.</p>
-<p><img src="/images/01/0006.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<p>Group đã được tạo thành công</p>
+<p><img alt="Hoàn thành tạo group" src="/images/01/0006.png"></p>
 </li>
 </ol>
-<h2 id="tạo-admin-user">Tạo Admin User</h2>
+<h4 id="tạo-admin-user">Tạo Admin User</h4>
 <ol>
 <li>
-<p>Ở thanh bên trái, chọn <strong>Users</strong> sau đó chọn <strong>Add User</strong></p>
-<p><img src="/images/02/0001.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<p>Trong navigation pane, chọn <strong>Users</strong> và nhấn <strong>Add users</strong></p>
+<p><img alt="Tạo User mới" src="/images/02/0001.png"></p>
 </li>
 <li>
-<p>Nhập tên User (Ví dụ: <em>AdminUser</em>).</p>
+<p>Cấu hình thông tin user:</p>
 <ul>
-<li>Click <strong>AWS Management Console access</strong>.</li>
-<li>Click <strong>Programmatic Access</strong>.</li>
-<li>Click <strong>Custom password</strong> rồi gõ một password tùy ý của bạn (lưu ý: bạn phải ghi nhớ mật khẩu này cho những lần đăng nhập trong tương lai).</li>
-<li>Bỏ chọn mục <strong>User must create a new password&hellip;</strong>.</li>
-<li>Click <strong>Next:Permissions</strong>.</li>
+<li>Nhập <strong>User name</strong> (ví dụ: <em>AdminUser</em>)</li>
+<li>Chọn <strong>AWS Management Console access</strong></li>
+<li>Chọn <strong>Programmatic access</strong></li>
+<li>Chọn <strong>Custom password</strong> và nhập mật khẩu</li>
+<li>Bỏ chọn <strong>User must create a new password at next sign-in</strong></li>
+<li>Nhấn <strong>Next: Permissions</strong></li>
 </ul>
-<p><img src="/images/02/0002.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
-<blockquote>
-<p><strong>Lưu ý:</strong> Bằng cách chọn <strong>AWS Management Console access</strong>, bạn vừa cho phép IAM User được truy cập vào AWS thông qua bảng điều khiển AWS trên web. Việc bỏ mục <strong>User must create a new password&hellip;</strong> cho phép người dùng khi lần đầu đăng nhập vào IAM User đó không cần phải tạo mật khẩu mới.</p>
-</blockquote>
+<p><img alt="Cấu hình User" src="/images/02/0002.png"></p>
 </li>
 <li>
-<p>Click tab <strong>Add user to group</strong> và click <strong>AdminGroup</strong> mà chúng ta tạo trước đó.</p>
-<p><img src="/images/02/0003.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<p>Chọn tab <strong>Add user to group</strong> và chọn group <strong>AdminGroup</strong> đã tạo</p>
+<p><img alt="Thêm user vào group" src="/images/02/0003.png"></p>
 </li>
 <li>
-<p>Click <strong>Next:Tags</strong></p>
-<ul>
-<li>Tags (thẻ) là một tùy chọn không bắt buộc để tổ chức, theo dõi, hoặc điều khiển truy cập của user, thế nên bạn có thể thêm tags hoặc không.</li>
-</ul>
+<p>Nhấn <strong>Next: Tags</strong> (Tags là tùy chọn để tổ chức và quản lý tài nguyên)</p>
 </li>
 <li>
-<p>Click <strong>Next:Review</strong>.</p>
-<p><img src="/images/02/0004.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<p>Nhấn <strong>Next: Review</strong></p>
+<p><img alt="Review thông tin" src="/images/02/0004.png"></p>
 </li>
 <li>
-<p>Kiểm tra thông tin và chọn <strong>Create user</strong></p>
-<p><img src="/images/02/0005.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<p>Kiểm tra lại thông tin và chọn <strong>Create user</strong></p>
+<p><img alt="Xác nhận tạo user" src="/images/02/0005.png"></p>
 </li>
 <li>
-<p>Hoàn thành tạo user. Có thể download.csv để lưu trữ Access key.</p>
-<p><img src="/images/02/0006.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<p>Tải xuống file .csv chứa access key (nếu cần)</p>
+<p><img alt="Download credentials" src="/images/02/0006.png"></p>
 </li>
 <li>
-<p>Tạo admin user thành công.</p>
-<p><img src="/images/02/0007.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<p>User đã được tạo thành công</p>
+<p><img alt="Hoàn thành tạo user" src="/images/02/0007.png"></p>
 </li>
 <li>
-<p>Kiểm tra thông tin chi tiết user.</p>
-<p><img src="/images/02/0008.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
-<blockquote>
-<p><strong>Lưu ý:</strong> Sau khi tạo user, bạn sẽ thấy hiện lên hộp thoại download thông tin access key và secret key. Đây là thông tin dùng để thực hiện <strong>Programmatic access</strong> tới các tài nguyên của AWS thông qua <strong>AWS CLI</strong> và <strong>AWS SDK</strong>. Tạm thời chúng ta sẽ chưa sử dụng tới.</p>
-</blockquote>
+<p>Xem chi tiết thông tin user</p>
+<p><img alt="Chi tiết user" src="/images/02/0008.png"></p>
 </li>
 </ol>
-<h1 id="đăng-nhập-vào-adminuser">Đăng nhập vào AdminUser</h1>
+<blockquote>
+<p><strong>Lưu ý:</strong> Sau khi tạo user, AWS sẽ hiển thị access key ID và secret access key. Đây là thông tin quan trọng để truy cập AWS thông qua AWS CLI và AWS SDK.</p>
+</blockquote>
+<h4 id="đăng-nhập-với-admin-user">Đăng nhập với Admin User</h4>
 <ol>
 <li>
-<p>Trở về dịch vụ IAM, và chọn <strong>Users</strong> ở thanh bên trái.</p>
+<p>Trong IAM console, chọn <strong>Users</strong> ở navigation pane</p>
 </li>
 <li>
-<p>Nhấn vào tên của IAM User mà bạn vừa chọn.</p>
+<p>Chọn IAM user vừa tạo</p>
 </li>
 <li>
-<p>Trong mục <strong>Summary</strong>, chọn tab <strong>Security credentials</strong>. Nhìn vào dòng <strong>Summary: Console sign-in link</strong> và copy đường link bên cạnh nó. Đây là đường link bạn dùng để đăng nhập vào IAM User.</p>
-<p><img src="/images/03/0001.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<p>Trong tab <strong>Security credentials</strong>, copy đường link console sign-in</p>
+<p><img alt="Copy sign-in link" src="/images/03/0001.png"></p>
 </li>
 <li>
-<p>Mở một tab ẩn danh của trình duyệt bạn đang sử dụng và paste đường link ấy vào thanh tìm kiếm.</p>
-<p><img src="/images/03/0002.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
-<blockquote>
-<p><strong>Lưu ý:</strong> Việc đăng nhập bằng tab ẩn danh cho phép bạn đăng nhập vào AWS bằng IAM User mà không cần phải log out khỏi root user trong tab chính.</p>
-</blockquote>
+<p>Mở tab ẩn danh mới và truy cập link sign-in</p>
+<p><img alt="Truy cập bằng tab ẩn danh" src="/images/03/0002.png"></p>
 </li>
 <li>
-<p>Nhập đúng tên IAM User và password mà bạn đã nhập ở phần <strong>tạo IAM User</strong> ở trên. Nhấn <strong>sign in</strong>.</p>
-<p><img src="/images/03/0003.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
+<p>Nhập thông tin đăng nhập:</p>
+<ul>
+<li>IAM user name</li>
+<li>Password đã tạo</li>
+<li>Nhấn <strong>Sign in</strong></li>
+</ul>
+<p><img alt="Đăng nhập IAM user" src="/images/03/0003.png"></p>
 </li>
 <li>
-<p>Chúc mừng, bạn đã truy cập thành công vào tài khoản của bạn dưới danh nghĩa của một IAM User <strong>AdminUser</strong>.</p>
-<p><img src="/images/03/0004.png?featherlight=false&amp;width=90pc" alt="AWS IAM"></p>
-</li>
-<li>
-<p>Bước tiếp theo, chúng ta sẽ chuyển sang sử dụng IAM Role để nâng cao tính bảo mật hơn cho account của bạn nhé.</p>
+<p>Đăng nhập thành công với IAM user</p>
+<p><img alt="Đăng nhập thành công" src="/images/03/0004.png"></p>
 </li>
 </ol>
-<h4 id="tham-khảo">Tham khảo</h4>
-<h1 id="iam-user-và-đăng-nhập-trong-aws">IAM User và Đăng Nhập Trong AWS</h1>
-<p>Một IAM user là một định danh được tạo trong một tài khoản AWS, có quyền được tương tác với các tài nguyên AWS. Người dùng IAM đăng nhập bằng cách sử dụng ID tài khoản hoặc tên bí danh, tên người dùng của họ và mật khẩu. Tên người dùng IAM được cấu hình bởi quản trị viên của bạn. Tên người dùng IAM có thể là tên thân thiện như &ldquo;Zhang&rdquo;, hoặc là địa chỉ email như &ldquo;<a href="mailto:zhang@example.com">zhang@example.com</a>&rdquo;. Tên người dùng IAM không thể chứa khoảng trắng, nhưng có thể chứa chữ cái in hoa và thường, số, và các ký tự + = , . @ _ -.</p>
-<p><strong>Mẹo</strong>
-Nếu người dùng IAM của bạn đã bật xác thực đa yếu tố (MFA), bạn phải có quyền truy cập vào thiết bị xác thực. Để biết thêm chi tiết, xem <a href="link_to_MFA_documentation">Sử dụng thiết bị MFA với trang đăng nhập IAM của bạn</a>.</p>
-<p><strong>Để đăng nhập với tư cách người dùng IAM</strong></p>
+<h4 id="tài-liệu-tham-khảo">Tài liệu tham khảo</h4>
+<h4 id="iam-user-và-đăng-nhập-aws">IAM User và Đăng nhập AWS</h4>
+<p>IAM user là một entity được tạo trong AWS account, có quyền tương tác với AWS resources. IAM user có thể đăng nhập bằng:</p>
+<ul>
+<li>Account ID/alias</li>
+<li>User name</li>
+<li>Password</li>
+</ul>
+<p>User name có thể là tên thường (<em>zhang</em>) hoặc email (<em><a href="mailto:zhang@example.com">zhang@example.com</a></em>), không chứa khoảng trắng nhưng có thể chứa:</p>
+<ul>
+<li>Chữ hoa và chữ thường</li>
+<li>Số</li>
+<li>Ký tự đặc biệt: + = , . @ _ -</li>
+</ul>
+<h4 id="tạo-access-key-cho-root-user">Tạo Access Key cho Root User</h4>
+<h4 id="quyền-yêu-cầu">Quyền yêu cầu</h4>
+<ul>
+<li>Cần đăng nhập bằng root user (không thể thực hiện với IAM user hoặc role)</li>
+</ul>
+<h4 id="các-bước-thực-hiện">Các bước thực hiện</h4>
 <ol>
 <li>
-<p>Mở Bảng điều khiển Quản lý AWS tại <a href="https://console.aws.amazon.com/">https://console.aws.amazon.com/</a>.</p>
+<p>Đăng nhập vào AWS Management Console bằng email và password của root user</p>
 </li>
 <li>
-<p>Trang đăng nhập chính hiển thị. Chọn &ldquo;IAM user&rdquo;, nhập ID tài khoản (12 chữ số) hoặc bí danh và chọn &ldquo;Next&rdquo;.</p>
+<p>Click vào tên account ở góc trên phải, chọn <strong>Security Credentials</strong></p>
+</li>
+<li>
+<p>Trong phần <strong>Access keys</strong>, chọn <strong>Create access key</strong></p>
+<blockquote>
+<p><strong>Lưu ý:</strong> Nếu không thấy tùy chọn này, có thể bạn đã đạt giới hạn số lượng access key. Cần xóa một key hiện có trước khi tạo mới.</p>
+</blockquote>
+</li>
+<li>
+<p>Trên trang <strong>Alternatives to root user access keys</strong>, đọc các khuyến nghị bảo mật. Tích vào checkbox và chọn <strong>Create access key</strong></p>
+</li>
+<li>
+<p>Trên trang <strong>Retrieve access key</strong>:</p>
+<ul>
+<li>Access key ID sẽ được hiển thị</li>
+<li>Click <strong>Show</strong> để xem Secret access key</li>
+<li>Copy và lưu cả Access key ID và Secret key vào nơi an toàn</li>
+<li>Hoặc tải file rootkey.csv để lưu thông tin</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Done</strong> để hoàn tất</p>
 </li>
 </ol>
-<p><strong>Ghi chú</strong>
-Bạn có thể không cần phải nhập ID tài khoản hoặc bí danh nếu bạn đã đăng nhập trước đó với tài khoản IAM bằng trình duyệt hiện tại hoặc nếu bạn đang sử dụng URL đăng nhập tài khoản của bạn.</p>
-<ol start="3">
+<blockquote>
+<p><strong>Khuyến nghị:</strong> Nên xóa hoặc vô hiệu hóa access key khi không còn sử dụng để đảm bảo an toàn.</p>
+</blockquote>
+<h4 id="xóa-access-key-cho-root-user">Xóa Access Key cho Root User</h4>
+<h4 id="quyền-yêu-cầu-1">Quyền yêu cầu</h4>
+<ul>
+<li>Cần đăng nhập bằng root user (không thể thực hiện với IAM user hoặc role)</li>
+</ul>
+<h4 id="các-bước-thực-hiện-1">Các bước thực hiện</h4>
+<ol>
 <li>
-<p>Nhập tên người dùng IAM và mật khẩu của bạn, sau đó chọn &ldquo;Sign in&rdquo;.</p>
+<p>Đăng nhập vào AWS Management Console bằng root user</p>
 </li>
 <li>
-<p>Nếu MFA được bật cho người dùng IAM của bạn, sau đó bạn sẽ được xác thực sử dụng nó.</p>
+<p>Click vào tên account ở góc trên phải, chọn <strong>Security Credentials</strong></p>
+</li>
+<li>
+<p>Trong phần <strong>Access keys</strong>, tìm key cần xóa:</p>
+<ul>
+<li>Click <strong>Delete</strong> trong menu <strong>Actions</strong> để xóa vĩnh viễn</li>
+<li>Hoặc click <strong>Deactivate</strong> để vô hiệu hóa tạm thời</li>
+</ul>
+</li>
+<li>
+<p>Trên hộp thoại xác nhận:</p>
+<ul>
+<li>Nhập Access key ID để xác nhận</li>
+<li>Click <strong>Delete</strong> để hoàn tất</li>
+</ul>
 </li>
 </ol>
-<p>Sau khi xác thực, Bảng điều khiển Quản lý AWS sẽ mở trang chủ Bảng điều khiển.</p>
-<h3 id="tạo-khóa-truy-cập-access-key-cho-tài-khoản-root-user-trên-aws">Tạo khóa truy cập (access key) cho tài khoản root user trên AWS</h3>
-<h4 id="quyền-tối-thiểu-cần-thiết">Quyền tối thiểu cần thiết</h4>
-<p>Để thực hiện các bước sau, bạn cần có ít nhất các quyền IAM (Identity and Access Management) sau đây:</p>
+<blockquote>
+<p><strong>Lưu ý về vô hiệu hóa key:</strong></p>
 <ul>
-<li>
-<p>Bạn phải đăng nhập với tư cách là tài khoản root user của AWS, điều này không yêu cầu bất kỳ quyền IAM bổ sung nào khác. Bạn không thể thực hiện các bước này với tư cách là người dùng IAM hoặc vai trò (role).</p>
-</li>
-<li>
-<p>Sử dụng địa chỉ email và mật khẩu của tài khoản AWS để đăng nhập vào Bảng điều khiển quản lý AWS (AWS Management Console) với tư cách là tài khoản root user.</p>
-</li>
-<li>
-<p>Ở góc trên bên phải của bảng điều khiển, chọn tên hoặc số tài khoản của bạn, sau đó chọn Security Credentials (Thông tin xác thực bảo mật).</p>
-</li>
-<li>
-<p>Ở phần Access keys (Khóa truy cập), chọn Create access key (Tạo khóa truy cập). Nếu tùy chọn này không khả dụng, điều đó có nghĩa bạn đã có số lượng tối đa các khóa truy cập. Bạn phải xóa một trong các khóa truy cập hiện có trước khi tạo khóa mới. Để biết thêm thông tin, xem IAM Object Quotas trong Hướng dẫn Người dùng IAM.</p>
-</li>
-<li>
-<p>Trên trang Alternatives to root user access keys (Các phương án thay thế cho khóa truy cập tài khoản root user), xem xét các khuyến nghị về bảo mật. Để tiếp tục, chọn vào ô kiểm và sau đó chọn Create access key (Tạo khóa truy cập).</p>
-</li>
-<li>
-<p>Trên trang Retrieve access key (Trang Lấy lại khóa truy cập), Access key ID của bạn sẽ được hiển thị.</p>
-</li>
-<li>
-<p>Dưới mục Secret access key (Khóa truy cập bí mật), chọn Show (Hiển thị) và sau đó sao chép Access key ID và Secret key từ cửa sổ trình duyệt của bạn, sau đó dán chúng vào một nơi an toàn. Tùy chọn khác, bạn có thể chọn Download .csv file (Tải xuống tệp .csv) để tải xuống một tệp có tên là rootkey.csv chứa Access key ID và Secret key. Lưu tệp ở một nơi an toàn.</p>
-</li>
-<li>
-<p>Chọn Done (Hoàn thành). Khi bạn không còn cần khóa truy cập nữa, chúng tôi khuyến nghị bạn xóa nó hoặc ít nhất là xem xét vô hiệu hóa nó để không ai có thể lạm dụng.</p>
-</li>
+<li>Key bị vô hiệu hóa có thể kích hoạt lại sau này</li>
+<li>Không cần thay đổi ID và Secret</li>
+<li>Các API call sử dụng key đã vô hiệu hóa sẽ bị từ chối với lỗi &ldquo;access denied&rdquo;</li>
+</ul>
+</blockquote>
+<p>Best Practices:</p>
+<ul>
+<li>Hạn chế sử dụng access key của root user</li>
+<li>Nên tạo IAM user có quyền phù hợp thay vì dùng root user</li>
+<li>Luôn bảo mật thông tin access key</li>
+<li>Xoá hoặc vô hiệu hóa key không sử dụng</li>
+<li>Định kỳ xoay vòng (rotate) các access key</li>
+<li>Sử dụng AWS CloudTrail để giám sát hoạt động của access key</li>
+</ul>
+<h4 id="chi-tiết-về-multi-factor-authentication-mfa">Chi tiết về Multi-Factor Authentication (MFA)</h4>
+<p>Khi MFA được bật, người dùng cần:</p>
+<ul>
+<li>Đăng nhập bình thường với username/password</li>
+<li>Nhập mã xác thực từ thiết bị MFA</li>
+</ul>
+<p>AWS hỗ trợ các loại thiết bị MFA:</p>
+<ul>
+<li>Virtual MFA (Google Authenticator, Authy)</li>
+<li>Hardware MFA token</li>
+<li>U2F security key</li>
 </ul>
 <blockquote>
-<p>Lưu ý: Các bước này chỉ áp dụng cho tài khoản root user trên AWS. Đối với các người dùng IAM hoặc vai trò (role), cách tạo và quản lý khóa truy cập có thể khác nhau.</p>
+<p><strong>Khuyến nghị:</strong> Nên bật MFA cho cả root user và IAM user để tăng cường bảo mật.</p>
 </blockquote>
-<h3 id="xóa-một-khóa-truy-cập-cho-người-dùng-gốc-trên-aws">Xóa một khóa truy cập cho người dùng gốc trên AWS</h3>
-<h4 id="quyền-tối-thiểu">Quyền tối thiểu</h4>
-<p>Để thực hiện các bước sau, bạn phải có ít nhất các quyền IAM (Quản lý Quyền và Danh sách quyền) sau đây:</p>
+<p>Tham khảo thêm:</p>
 <ul>
-<li>Bạn phải đăng nhập dưới tư cách người dùng gốc của tài khoản AWS, điều này không yêu cầu bất kỳ quyền AWS Identity and Access Management (IAM) bổ sung nào. Bạn không thể thực hiện các bước này dưới tư cách người dùng IAM hoặc vai trò.</li>
-<li>Sử dụng địa chỉ email và mật khẩu của tài khoản AWS để đăng nhập vào Bảng điều khiển Quản lý AWS dưới tư cách người dùng gốc của bạn.</li>
-<li>Ở góc trên bên phải của bảng điều khiển, chọn tên hoặc số tài khoản của bạn, sau đó chọn <strong>Security Credentials</strong> (Chứng chỉ Bảo mật).</li>
-<li>Trong phần <strong>Access keys</strong> (Khóa truy cập), chọn khóa truy cập mà bạn muốn xóa, sau đó, ở mục <strong>Actions</strong> (Thao tác), chọn <strong>Delete</strong> (Xóa).</li>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">IAM User Guide</a></li>
+<li><a href="https://aws.amazon.com/security/security-learning/">AWS Security Best Practices</a></li>
+<li><a href="https://docs.aws.amazon.com/cloudtrail/">AWS CloudTrail Documentation</a></li>
 </ul>
-<blockquote>
-<p><strong>Lưu ý</strong>
-Theo cách khác, bạn có thể <strong>Deactivate</strong> (Ngưng hoạt động) một khóa truy cập thay vì xóa nó vĩnh viễn. Điều này giúp bạn có thể tiếp tục sử dụng nó trong tương lai mà không cần thay đổi cả ID khóa lẫn khóa bí mật. Trong khi khóa bị vô hiệu hóa, mọi yêu cầu sử dụng nó trong các yêu cầu tới AWS API sẽ thất bại với lỗi &ldquo;access denied&rdquo; (truy cập bị từ chối).</p>
-<p>Trên hộp thoại <strong>Delete <!-- raw HTML omitted --></strong> (Xóa &lt;ID khóa truy cập&gt;), chọn <strong>Deactivate</strong> (Ngưng hoạt động), nhập ID khóa truy cập để xác nhận bạn muốn xóa nó, sau đó chọn <strong>Delete</strong> (Xóa).</p>
-</blockquote>
 
 
 
@@ -1035,19 +1062,19 @@ Theo cách khác, bạn có thể <strong>Deactivate</strong> (Ngưng hoạt đ�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1734664421"></script>
-    <script src="/js/perfect-scrollbar.min.js?1734664421"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1734664421"></script>
-    <script src="/js/jquery.sticky.js?1734664421"></script>
-    <script src="/js/featherlight.min.js?1734664421"></script>
-    <script src="/js/highlight.pack.js?1734664421"></script>
+    <script src="/js/clipboard.min.js?1734689403"></script>
+    <script src="/js/perfect-scrollbar.min.js?1734689403"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1734689403"></script>
+    <script src="/js/jquery.sticky.js?1734689403"></script>
+    <script src="/js/featherlight.min.js?1734689403"></script>
+    <script src="/js/highlight.pack.js?1734689403"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1734664421"></script>
-    <script src="/js/learn.js?1734664421"></script>
-    <script src="/js/hugo-learn.js?1734664421"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1734689403"></script>
+    <script src="/js/learn.js?1734689403"></script>
+    <script src="/js/hugo-learn.js?1734689403"></script>
 
-    <link href="/mermaid/mermaid.css?1734664421" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1734664421"></script>
+    <link href="/mermaid/mermaid.css?1734689403" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1734689403"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
