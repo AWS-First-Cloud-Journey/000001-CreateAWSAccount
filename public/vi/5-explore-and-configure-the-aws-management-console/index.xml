@@ -2,39 +2,50 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Khám phá và cấu hình AWS Management Console on Tạo mới tài khoản AWS</title>
-    <link>//localhost:1313/vi/5-explore-and-configure-the-aws-management-console/</link>
+    <link>/vi/5-explore-and-configure-the-aws-management-console/</link>
     <description>Recent content in Khám phá và cấu hình AWS Management Console on Tạo mới tài khoản AWS</description>
-    <generator>Hugo</generator>
-    <language>vi</language>
-    <lastBuildDate>Thu, 01 Jan 1970 07:33:44 +0700</lastBuildDate>
-    <atom:link href="//localhost:1313/vi/5-explore-and-configure-the-aws-management-console/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 01 Jan 1970 07:33:44 +0700</lastBuildDate><atom:link href="/vi/5-explore-and-configure-the-aws-management-console/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thiết lập Region Mặc Định</title>
-      <link>//localhost:1313/vi/5-explore-and-configure-the-aws-management-console/5.1-config-default-region/</link>
+      <link>/vi/5-explore-and-configure-the-aws-management-console/5.1-config-default-region/</link>
       <pubDate>Thu, 01 Jan 1970 07:33:44 +0700</pubDate>
-      <guid>//localhost:1313/vi/5-explore-and-configure-the-aws-management-console/5.1-config-default-region/</guid>
-      <description>Set up Default Region Trong bước này, chúng ta sẽ chọn một Khu vực AWS (Region) cụ thể để quản lý tài nguyên! Với Region là tập hợp các tài nguyên AWS nằm trong cùng một khu vực địa lý.&#xA;Theo ví dụ trong hình bên dưới, chúng ta đang ở Region Virginia (us-east-1)&#xA;Tuy nhiên, thông thường khách hàng của chúng ta là người dùng cuối ở Việt Nam, vậy Region gần nhất sẽ là Singapore (ap-southeast-1) để giảm độ trễ (latency)</description>
+      
+      <guid>/vi/5-explore-and-configure-the-aws-management-console/5.1-config-default-region/</guid>
+      <description>Set up Default Region Trong bước này, chúng ta sẽ chọn một Khu vực AWS (Region) cụ thể để quản lý tài nguyên! Với Region là tập hợp các tài nguyên AWS nằm trong cùng một khu vực địa lý.
+Theo ví dụ trong hình bên dưới, chúng ta đang ở Region Virginia (us-east-1)
+Tuy nhiên, thông thường khách hàng của chúng ta là người dùng cuối ở Việt Nam, vậy Region gần nhất sẽ là Singapore (ap-southeast-1) để giảm độ trễ (latency)</description>
     </item>
+    
     <item>
       <title>Tìm kiếm các dịch vụ bằng AWS Management Console</title>
-      <link>//localhost:1313/vi/5-explore-and-configure-the-aws-management-console/5.2-search-with-the-aws-management-console/</link>
+      <link>/vi/5-explore-and-configure-the-aws-management-console/5.2-search-with-the-aws-management-console/</link>
       <pubDate>Thu, 01 Jan 1970 07:33:44 +0700</pubDate>
-      <guid>//localhost:1313/vi/5-explore-and-configure-the-aws-management-console/5.2-search-with-the-aws-management-console/</guid>
-      <description>Search with the AWS Management Console Trong bài lab này, chúng ta cùng khám phá hộp tìm kiếm (search box) trên thanh điều hướng, search box cung cấp công cụ tìm kiếm các dịch vụ và tính năng trên AWS, tài liệu và AWS Marketplace.&#xA;Để mở bảng điều khiển cho một dịch vụ, chúng ta sẽ dùng search box trong thanh điều hướng của AWS Management Console và nhập tên dịch vụ, Vd như: EC2 Sau đó, chọn dịch vụ EC2 Kết quả: Trang bảng điều khiển EC2 được hiển thị Chọn logo AWS hiển thị ở góc trên bên trái để quay lại trang chủ của bảng điều khiển.</description>
+      
+      <guid>/vi/5-explore-and-configure-the-aws-management-console/5.2-search-with-the-aws-management-console/</guid>
+      <description>Search with the AWS Management Console Trong bài lab này, chúng ta cùng khám phá hộp tìm kiếm (search box) trên thanh điều hướng, search box cung cấp công cụ tìm kiếm các dịch vụ và tính năng trên AWS, tài liệu và AWS Marketplace.
+ Để mở bảng điều khiển cho một dịch vụ, chúng ta sẽ dùng search box trong thanh điều hướng của AWS Management Console và nhập tên dịch vụ, Vd như: EC2  Sau đó, chọn dịch vụ EC2   Kết quả: Trang bảng điều khiển EC2 được hiển thị   Chọn logo AWS hiển thị ở góc trên bên trái để quay lại trang chủ của bảng điều khiển.</description>
     </item>
+    
     <item>
       <title>Thêm Vào và Xóa Đi các dịch vụ AWS yêu thích</title>
-      <link>//localhost:1313/vi/5-explore-and-configure-the-aws-management-console/5.3-add-and-remove-favorites/</link>
+      <link>/vi/5-explore-and-configure-the-aws-management-console/5.3-add-and-remove-favorites/</link>
       <pubDate>Thu, 01 Jan 1970 07:33:44 +0700</pubDate>
-      <guid>//localhost:1313/vi/5-explore-and-configure-the-aws-management-console/5.3-add-and-remove-favorites/</guid>
-      <description>Add And Remove Favorites Trong bài lab này, chúng ta cùng khám phá AWS Management Console để thêm các dịch vụ AWS vào danh sách yêu thích và xóa các dịch vụ đã thêm khỏi danh sách yêu thích.&#xA;Thêm dịch vụ vào danh sách yêu thích Trên thanh điều hướng, chọn Services để mở danh sách đầy đủ các dịch vụ. Chọn All services Chọn &amp;ldquo;thanh di chuyển&amp;rdquo; bên phải để di chuyển lên xuống nhằm tìm kiếm dịch vụ.</description>
+      
+      <guid>/vi/5-explore-and-configure-the-aws-management-console/5.3-add-and-remove-favorites/</guid>
+      <description>Add And Remove Favorites Trong bài lab này, chúng ta cùng khám phá AWS Management Console để thêm các dịch vụ AWS vào danh sách yêu thích và xóa các dịch vụ đã thêm khỏi danh sách yêu thích.
+Thêm dịch vụ vào danh sách yêu thích  Trên thanh điều hướng, chọn Services để mở danh sách đầy đủ các dịch vụ.   Chọn All services Chọn &amp;ldquo;thanh di chuyển&amp;rdquo; bên phải để di chuyển lên xuống nhằm tìm kiếm dịch vụ.</description>
     </item>
+    
     <item>
       <title>Khởi tạo và sử dụng Dashboard Widgets</title>
-      <link>//localhost:1313/vi/5-explore-and-configure-the-aws-management-console/5.4create-and-use-dashboard-widgets/</link>
+      <link>/vi/5-explore-and-configure-the-aws-management-console/5.4create-and-use-dashboard-widgets/</link>
       <pubDate>Thu, 01 Jan 1970 07:33:44 +0700</pubDate>
-      <guid>//localhost:1313/vi/5-explore-and-configure-the-aws-management-console/5.4create-and-use-dashboard-widgets/</guid>
-      <description>Create and use dashboard widgets Trong bài lab này, cùng tìm hiểu các &amp;ldquo;tiện ích hiển thị&amp;rdquo; cho những thông tin quan trọng về môi trường AWS của chúng ta và cung cấp lối tắt cho các dịch vụ AWS.&#xA;Chúng ta có thể tùy chỉnh trải nghiệm của mình bằng cách thêm và xóa các tiện ích (widgets) này, sắp xếp lại hoặc thay đổi kích thước tùy chỉnh</description>
+      
+      <guid>/vi/5-explore-and-configure-the-aws-management-console/5.4create-and-use-dashboard-widgets/</guid>
+      <description>Create and use dashboard widgets Trong bài lab này, cùng tìm hiểu các &amp;ldquo;tiện ích hiển thị&amp;rdquo; cho những thông tin quan trọng về môi trường AWS của chúng ta và cung cấp lối tắt cho các dịch vụ AWS.
+Chúng ta có thể tùy chỉnh trải nghiệm của mình bằng cách thêm và xóa các tiện ích (widgets) này, sắp xếp lại hoặc thay đổi kích thước tùy chỉnh</description>
     </item>
+    
   </channel>
 </rss>
