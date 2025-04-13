@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="description" content="">
+<meta name="author" content="journeyoftheaverageguy@gmail.com">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Đóng tài khoản AWS độc lập :: Tạo mới tài khoản AWS</title>
+
+    
+    <link href="/css/nucleus.css?1744570503" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744570503" rel="stylesheet">
+    <link href="/css/hybrid.css?1744570503" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744570503" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744570503" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744570503" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744570503" rel="stylesheet">
+    <link href="/css/theme.css?1744570503" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744570503" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1744570503" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1744570503"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/vi/1-create-new-aws-account/1.4-close-account/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1744570503"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744570503"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/vi";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1744570503"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-create-new-aws-account/" title="Tạo mới tài khoản AWS" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/vi/1-create-new-aws-account/">
+           <b> 1. </b> Tạo mới tài khoản AWS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-create-new-aws-account/1.1-find-account-id/" title="Xem Định Danh Tài Khoản AWS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-create-new-aws-account/1.1-find-account-id/">
+           <b> 1.1 </b> Xem Định Danh Tài Khoản AWS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-create-new-aws-account/1.2-update-account/" title="Cập nhật tài khoản" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-create-new-aws-account/1.2-update-account/">
+           <b> 1.2 </b> Cập nhật tài khoản
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-create-new-aws-account/1.3-aws-account-alias/" title="Quản lý Alias tài khoản AWS cho đăng nhập IAM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-create-new-aws-account/1.3-aws-account-alias/">
+           <b> 1.3 </b> Quản lý Alias tài khoản AWS cho đăng nhập IAM
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-create-new-aws-account/1.4-close-account/" title="Đóng tài khoản AWS độc lập" class="dd-item 
+        
+        active
+        
+        ">
+      <a href="/vi/1-create-new-aws-account/1.4-close-account/">
+           <b> 1.4 </b> Đóng tài khoản AWS độc lập
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-mfa-setup-for-aws-user-root/" title="MFA cho Tài khoản AWS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-mfa-setup-for-aws-user-root/">
+           <b> 2. </b> MFA cho Tài khoản AWS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/" title="Thiết bị MFA ảo" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-mfa-setup-for-aws-user-root/1-virtual-mfa-device/">
+           <b> 2.1 </b> Thiết bị MFA ảo
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/" title="Khóa bảo mật U2F" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/">
+           <b> 2.2 </b> Khóa bảo mật U2F
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/" title="Thiết bị MFA cứng" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-mfa-setup-for-aws-user-root/3-other-hardware-mfa-device/">
+           <b> 2.3 </b> Thiết bị MFA cứng
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-create-admin-user-and-group/" title="Tạo Admin Group và Admin User" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-create-admin-user-and-group/">
+           <b> 3. </b> Tạo Admin Group và Admin User
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-verify-new-account/" title="Hỗ trợ Xác thực Tài khoản" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-verify-new-account/">
+           <b> 4. </b> Hỗ trợ Xác thực Tài khoản
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-explore-and-configure-the-aws-management-console/" title="Khám phá và cấu hình AWS Management Console" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-explore-and-configure-the-aws-management-console/">
+          <b>5. </b>Khám phá và cấu hình AWS Management Console
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/5-explore-and-configure-the-aws-management-console/5.1-config-default-region/" title="Thiết lập Region Mặc Định" class="dd-item ">
+        <a href="/vi/5-explore-and-configure-the-aws-management-console/5.1-config-default-region/">
+        <b>5.1 </b>Thiết lập Region Mặc Định
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/5-explore-and-configure-the-aws-management-console/5.2-search-with-the-aws-management-console/" title="Tìm kiếm các dịch vụ bằng AWS Management Console" class="dd-item ">
+        <a href="/vi/5-explore-and-configure-the-aws-management-console/5.2-search-with-the-aws-management-console/">
+        <b>5.2 </b>Tìm kiếm các dịch vụ bằng AWS Management Console
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/5-explore-and-configure-the-aws-management-console/5.3-add-and-remove-favorites/" title="Thêm Vào và Xóa Đi các dịch vụ AWS yêu thích" class="dd-item ">
+        <a href="/vi/5-explore-and-configure-the-aws-management-console/5.3-add-and-remove-favorites/">
+        <b>5.3 </b>Thêm Vào và Xóa Đi các dịch vụ AWS yêu thích
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/vi/5-explore-and-configure-the-aws-management-console/5.4create-and-use-dashboard-widgets/" title="Khởi tạo và sử dụng Dashboard Widgets" class="dd-item ">
+        <a href="/vi/5-explore-and-configure-the-aws-management-console/5.4create-and-use-dashboard-widgets/">
+        <b>5.4 </b>Khởi tạo và sử dụng Dashboard Widgets
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-support-cases/" title="Tạo và Quản Lý Các Trường Hợp Hỗ Trợ trong AWS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-support-cases/">
+           <b> 6. </b> Tạo và Quản Lý Các Trường Hợp Hỗ Trợ trong AWS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="/1-create-new-aws-account/1.4-close-account/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="vi" value="/vi/1-create-new-aws-account/1.4-close-account/" selected>Tiếng Việt</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830891&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
+</left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>14-04-2025</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng</a> <br>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Hoang Kha</a>
+        </i>
+        </left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/vi/'>Thiết lập Tài Khoản AWS</a> > <a href='/vi/1-create-new-aws-account/'>Tạo mới tài khoản AWS</a> > Đóng tài khoản AWS độc lập
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#đóng-tài-khoản-aws-độc-lập">Đóng tài khoản AWS độc lập</a>
+      <ul>
+        <li><a href="#những-điều-cần-cân-nhắc-trước-khi-đóng-tài-khoản-aws">Những điều cần cân nhắc trước khi đóng tài khoản AWS</a></li>
+      </ul>
+    </li>
+    <li><a href="#cách-đóng-tài-khoản-aws-của-bạn">Cách đóng tài khoản AWS của bạn</a>
+      <ul>
+        <li><a href="#quyền-tối-thiểu">Quyền tối thiểu</a></li>
+        <li><a href="#xem-xét-các-cân-nhắc-trước-khi-đóng-tài-khoản-aws">Xem xét các cân nhắc trước khi đóng tài khoản AWS</a></li>
+        <li><a href="#truy-cập-tài-khoản-aws-sau-khi-đóng">Truy cập tài khoản AWS sau khi đóng</a></li>
+        <li><a href="#mở-lại-tài-khoản-aws">Mở lại tài khoản AWS</a></li>
+        <li><a href="#sau-thời-gian-hậu-đóng-cửa">Sau Thời gian hậu đóng cửa</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Đóng tài khoản AWS độc lập
+            </h1>
+          
+
+        
+
+
+
+	<h2 id="đóng-tài-khoản-aws-độc-lập">Đóng tài khoản AWS độc lập</h2>
+<h3 id="những-điều-cần-cân-nhắc-trước-khi-đóng-tài-khoản-aws">Những điều cần cân nhắc trước khi đóng tài khoản AWS</h3>
+<p>Trước khi đóng tài khoản AWS, bạn nên cân nhắc những điều sau:</p>
+<h4 id="thỏa-thuận-của-bạn-với-aws">Thỏa thuận của bạn với AWS</h4>
+<p>Việc đóng tài khoản AWS của bạn đóng vai trò như thông báo cho chúng tôi rằng bạn muốn hủy thỏa thuận khách hàng AWS hoặc thỏa thuận khác với AWS quy định tài khoản AWS của bạn, chỉ đối với tài khoản AWS cụ thể này. Nếu bạn mở lại tài khoản AWS trong thời gian hậu đóng cửa (trong vòng 90 ngày sau khi đóng tài khoản), bạn đồng ý rằng các điều khoản thỏa thuận giống nhau sẽ chi phối quyền truy cập và sử dụng dịch vụ của bạn thông qua tài khoản AWS đã mở lại.</p>
+<h4 id="truy-cập-aws-management-console">Truy cập AWS Management Console</h4>
+<p>Quyền truy cập vào AWS Management Console đối với tài khoản AWS đã đóng sẽ bị hạn chế. Trong thời gian hậu đóng cửa, bạn vẫn có thể đăng nhập vào tài khoản AWS để xem thông tin thanh toán trước đây và truy cập AWS Support. Bạn không thể truy cập bất kỳ dịch vụ AWS nào khác hoặc bắt đầu bất kỳ dịch vụ AWS mới nào trong tài khoản đã đóng.</p>
+<h4 id="tìm-và-chấm-dứt-tài-nguyên-đang-hoạt-động">Tìm và chấm dứt tài nguyên đang hoạt động</h4>
+<p>Để tránh những khoản phí không mong muốn, trước khi đóng tài khoản, chúng tôi khuyên bạn nên xem xét và chấm dứt tất cả các tài nguyên hiện đang chạy trong tài khoản.</p>
+<ol>
+<li>Đăng nhập vào AWS Management Console.</li>
+<li>Trên thanh điều hướng, chọn Services (Dịch vụ).</li>
+<li>Trên trang Services, tìm kiếm Resource Groups.</li>
+<li>Trong Tag Editor, ở mục Regions (Khu vực), chọn các khu vực nơi bạn đã tạo tài nguyên, hoặc chọn All regions (Tất cả khu vực).</li>
+<li>Trong Resource types (Loại tài nguyên), chọn All supported resource types (Tất cả loại tài nguyên được hỗ trợ).</li>
+<li>Chọn Search Resources (Tìm kiếm tài nguyên). Nếu kết quả tìm kiếm xuất hiện, thì vẫn còn tài nguyên đang hoạt động trên tài khoản.</li>
+</ol>
+<blockquote>
+<p><strong>Lưu ý:</strong>
+Kết quả tìm kiếm AWS Resource Groups không hiển thị các đăng ký AWS Marketplace. Để quản lý đăng ký, hãy xem Quản lý phần mềm của bạn.</p>
+</blockquote>
+<p>Bạn nên lưu trữ nội dung của mình và xóa tài nguyên khi thích hợp. Để biết thêm hướng dẫn về cách truy xuất nội dung của bạn, hãy xem tài liệu của dịch vụ đó.</p>
+<p>Để biết thêm thông tin, hãy xem <a href="link-to-more-info">Làm thế nào để kiểm tra các tài nguyên đang hoạt động mà tôi không còn cần trên tài khoản AWS của mình?</a></p>
+<h4 id="nội-dung-hiện-có-và-dịch-vụ-vẫn-được-sử-dụng-sau-khi-đóng">Nội dung hiện có và dịch vụ vẫn được sử dụng sau khi đóng</h4>
+<p>Sau thời gian hậu đóng cửa, AWS tự động xóa mọi nội dung còn lại trong tài khoản AWS của bạn và cố gắng chấm dứt mọi dịch vụ AWS vẫn đang được sử dụng. Để biết thêm thông tin về thời gian hậu đóng cửa, hãy xem <a href="link-to-more-info">Truy cập tài khoản AWS của bạn sau khi đóng</a>.</p>
+<h4 id="phương-thức-thanh-toán-của-bạn">Phương thức thanh toán của bạn</h4>
+<p>Chúng tôi tính phí thông qua phương thức thanh toán được chỉ định của bạn cho bất kỳ khoản phí sử dụng nào phát sinh trước khi bạn đóng tài khoản AWS. Chúng tôi hoàn lại bất kỳ khoản tiền hoàn trả nào có thể đến hạn thông qua cùng một phương thức thanh toán. Nếu bạn có đăng ký đang hoạt động (chẳng hạn như Reserved Instance mà bạn thanh toán hàng tháng), ngay cả sau khi tài khoản của bạn bị đóng, bạn có thể tiếp tục bị tính phí cho đăng ký thông qua phương thức thanh toán được chỉ định cho đến khi đăng ký hết hạn hoặc được bán theo các điều khoản quy định đăng ký. Các khoản phí và hoàn trả này có thể phát sinh sau khi bạn đóng tài khoản.</p>
+<p>Ngoài ra, nếu bạn mở lại tài khoản, bạn có thể bị tính phí cho chi phí chạy các dịch vụ AWS (mà bạn không dừng trước khi đóng tài khoản) trong thời gian hậu đóng cửa. Việc đóng tài khoản AWS của bạn không ảnh hưởng đến các phương thức thanh toán mà bạn sử dụng trên Amazon.com hoặc các trang web Amazon khác.</p>
+<h4 id="phí-on-demand-theo-yêu-cầu">Phí On-Demand (Theo yêu cầu)</h4>
+<p>Trong thời gian hậu đóng cửa, việc thanh toán cho các khoản phí On-Demand sẽ dừng lại. Tuy nhiên, bạn sẽ bị tính phí cho bất kỳ việc sử dụng nào đã tích lũy cho đến thời điểm bạn đóng tài khoản. Bạn sẽ bị tính phí cho việc sử dụng đó vào đầu tháng tiếp theo. Ngoài ra, nếu bạn đã mua bất kỳ đăng ký nào với nghĩa vụ thanh toán liên tục, bạn có thể tiếp tục bị tính phí cho chúng sau khi tài khoản của bạn bị đóng.</p>
+<blockquote>
+<p><strong>Quan trọng:</strong>
+Bạn sẽ tiếp tục phát sinh chi phí nếu bạn không dừng hoặc xóa tài nguyên của mình.</p>
+</blockquote>
+<h4 id="tên-miền-đăng-ký-với-amazon-route-53">Tên miền đăng ký với Amazon Route 53</h4>
+<p>Các tên miền được đăng ký với Route 53 không bị xóa tự động. Khi bạn đóng tài khoản AWS, bạn có ba lựa chọn:</p>
+<ol>
+<li>
+<p>Bạn có thể tắt tự động gia hạn, và các tên miền sẽ tự động bị xóa khi thời gian đăng ký hết hạn. Để biết thêm thông tin, hãy xem <a href="link-to-more-info">Bật hoặc Tắt Tự động Gia hạn cho Tên miền</a>.</p>
+</li>
+<li>
+<p>Bạn có thể chuyển tên miền sang tài khoản AWS khác. Để biết thêm thông tin, hãy xem <a href="link-to-more-info">Chuyển Tên miền sang Tài khoản AWS Khác</a>.</p>
+</li>
+<li>
+<p>Bạn có thể chuyển tên miền sang nhà đăng ký tên miền khác. Để biết thêm thông tin, hãy xem <a href="link-to-more-info">Chuyển Tên miền từ Route 53 sang Nhà đăng ký Khác</a>.</p>
+</li>
+</ol>
+<p>Nếu bạn đã đóng tài khoản, bạn có thể mở một trường hợp với AWS Support để được giúp đỡ trong việc tắt tự động gia hạn hoặc chuyển tên miền của bạn. Để biết thêm thông tin, hãy xem <a href="link-to-more-info">Liên hệ AWS Support về Vấn đề Đăng ký Tên miền</a>. Không có phí để mở một trường hợp cho vấn đề đăng ký tên miền.</p>
+<h4 id="phí-nếu-bạn-mở-lại-tài-khoản-aws">Phí nếu bạn mở lại tài khoản AWS</h4>
+<p>Nếu bạn mở lại tài khoản AWS trong thời gian hậu đóng cửa, bạn có thể bị tính phí cho chi phí của bất kỳ dịch vụ AWS nào không bị dừng hoặc tài nguyên không bị xóa trước khi bạn đóng tài khoản.</p>
+<blockquote>
+<p><strong>Ví dụ:</strong>
+Bạn mở lại tài khoản AWS 30 ngày sau khi đóng. Tài khoản AWS của bạn chỉ có một instance t2.micro Amazon EC2 đang hoạt động khi đóng. Trong ví dụ này, hãy tưởng tượng rằng giá cho một instance t2.micro Amazon EC2 trong khu vực AWS của bạn là 0.01$ mỗi giờ. Trong trường hợp này, bạn có thể bị tính phí cho 30 ngày x 24 giờ x 0.01$ mỗi giờ = 7.20$ cho các dịch vụ AWS của bạn.</p>
+</blockquote>
+<h4 id="truy-cập-tài-khoản-chéo-vào-tài-khoản-bạn-đang-đóng">Truy cập tài khoản chéo vào tài khoản bạn đang đóng</h4>
+<p>Sau khi bạn đóng tài khoản AWS, bất kỳ yêu cầu truy cập nào vào dịch vụ AWS của tài khoản đã đóng từ các tài khoản AWS khác đều thất bại. Điều này xảy ra ngay cả khi bạn đã cấp cho các tài khoản khác quyền truy cập vào dịch vụ AWS của tài khoản của bạn. Nếu bạn mở lại tài khoản AWS, các tài khoản AWS khác có thể truy cập lại vào dịch vụ và tài nguyên AWS của tài khoản của bạn nếu bạn đã cấp các quyền cần thiết cho các tài khoản AWS khác.</p>
+<h4 id="loại-bỏ-kết-nối-amazon-vpc-peering">Loại bỏ kết nối Amazon VPC peering</h4>
+<p>AWS không xóa kết nối Amazon Virtual Private Cloud (Amazon VPC) peering khi bạn đóng một trong các tài khoản tham gia vào kết nối VPC peering. Bất kỳ lưu lượng nào đến kết nối VPC peering bắt nguồn từ các tài khoản đang hoạt động khác đều bị loại bỏ vì AWS chấm dứt các instance và xóa bất kỳ nhóm bảo mật nào trong tài khoản đã đóng. Để loại bỏ kết nối VPC peering, hãy xóa nó khỏi tài khoản của bạn bằng cách sử dụng bảng điều khiển Amazon VPC, AWS Command Line Interface (AWS CLI), hoặc Amazon EC2 API. Để biết thêm thông tin, hãy xem <a href="link-to-more-info">Xóa Kết nối VPC Peering</a>.</p>
+<h4 id="khắc-phục-lỗi-khi-đóng-tài-khoản-aws">Khắc phục lỗi khi đóng tài khoản AWS</h4>
+<p>Nếu bạn nhận được thông báo lỗi khi cố gắng đóng tài khoản AWS, bạn có thể liên hệ với đại diện tài khoản của mình hoặc liên hệ với AWS Support để mở một trường hợp hỗ trợ thanh toán hoặc tài khoản để được hỗ trợ. Những lý do phổ biến khiến bạn có thể không đóng được tài khoản AWS bao gồm:</p>
+<ul>
+<li>
+<p>Tài khoản của bạn là tài khoản quản lý của một tổ chức trong AWS Organizations với các tài khoản thành viên đang hoạt động. Để đóng tài khoản quản lý, trước tiên bạn phải xóa tất cả tài khoản thành viên khỏi tổ chức.</p>
+</li>
+<li>
+<p>Bạn có hóa đơn chưa thanh toán cho tài khoản của mình.</p>
+</li>
+<li>
+<p>Bạn không đăng nhập vào tài khoản với tư cách là người dùng root của tài khoản AWS.</p>
+</li>
+<li>
+<p>Bạn là người bán AWS Marketplace đang hoạt động.</p>
+</li>
+</ul>
+<h2 id="cách-đóng-tài-khoản-aws-của-bạn">Cách đóng tài khoản AWS của bạn</h2>
+<h3 id="quyền-tối-thiểu">Quyền tối thiểu</h3>
+<p>Để thực hiện các bước sau, bạn phải có ít nhất các quyền IAM sau:</p>
+<ul>
+<li>Bạn phải đăng nhập với tư cách là người dùng root của tài khoản AWS, điều này không yêu cầu quyền IAM bổ sung. Bạn không thể thực hiện các bước này với tư cách là người dùng IAM hoặc vai trò.</li>
+</ul>
+<h3 id="xem-xét-các-cân-nhắc-trước-khi-đóng-tài-khoản-aws">Xem xét các cân nhắc trước khi đóng tài khoản AWS</h3>
+<ol>
+<li>
+<p>Đăng nhập với tư cách là người dùng root của tài khoản bạn muốn đóng, sử dụng địa chỉ email và mật khẩu liên kết với tài khoản. Lưu ý rằng việc đăng nhập với tư cách là người dùng AWS Identity and Access Management (IAM) hoặc vai trò sẽ không cho phép bạn đóng tài khoản.</p>
+</li>
+<li>
+<p>Trên thanh điều hướng ở góc trên bên phải, chọn tên tài khoản (hoặc bí danh) của bạn, sau đó chọn &ldquo;Account&rdquo; (Tài khoản).</p>
+</li>
+<li>
+<p>Cuộn đến cuối trang Account đến phần &ldquo;Close Account&rdquo; (Đóng tài khoản). Đảm bảo bạn đọc và hiểu văn bản bên cạnh các hộp kiểm. Sau khi đóng tài khoản AWS, bạn sẽ không còn quyền truy cập vào dịch vụ AWS bằng tài khoản đó.</p>
+</li>
+<li>
+<p>Chọn các hộp kiểm để chấp nhận các điều khoản, sau đó chọn &ldquo;Close Account&rdquo; (Đóng tài khoản).</p>
+</li>
+<li>
+<p>Trong hộp xác nhận, chọn &ldquo;Close Account&rdquo; (Đóng tài khoản).</p>
+</li>
+</ol>
+<h3 id="truy-cập-tài-khoản-aws-sau-khi-đóng">Truy cập tài khoản AWS sau khi đóng</h3>
+<p>Sau khi đóng tài khoản AWS, bạn sẽ không còn quyền truy cập vào dịch vụ AWS bằng tài khoản đó. Tuy nhiên, trong thời gian 90 ngày sau khi đóng tài khoản (gọi là Thời gian hậu đóng cửa), bạn có thể:</p>
+<ul>
+<li>Xem thông tin thanh toán trước đây của tài khoản AWS.</li>
+<li>Truy cập AWS Support.</li>
+</ul>
+<p>Trong Thời gian hậu đóng cửa, AWS có thể giữ lại bất kỳ nội dung nào bạn chưa xóa và bất kỳ dịch vụ AWS đang hoạt động nào. Để truy cập nội dung còn lại hoặc dịch vụ AWS, bạn có thể mở lại tài khoản trong Thời gian hậu đóng cửa.</p>
+<h3 id="mở-lại-tài-khoản-aws">Mở lại tài khoản AWS</h3>
+<p>Để mở lại tài khoản AWS, hãy liên hệ AWS Support. Nếu bạn chọn mở lại tài khoản, bạn có thể truy cập nội dung được giữ lại và dịch vụ AWS đã hoạt động trước khi đóng tài khoản. Lưu ý rằng bạn có thể phải chịu phí cho việc chạy các dịch vụ AWS này trong Thời gian hậu đóng cửa. Sử dụng <a href="https://calculator.aws/">AWS Pricing Calculator</a> để ước tính các chi phí này.</p>
+<h3 id="sau-thời-gian-hậu-đóng-cửa">Sau Thời gian hậu đóng cửa</h3>
+<p>Khi Thời gian hậu đóng cửa kết thúc, AWS sẽ đóng vĩnh viễn tài khoản AWS của bạn. Bất kỳ nội dung nào chưa xóa sẽ bị xóa vĩnh viễn, và bất kỳ dịch vụ AWS đang hoạt động nào sẽ bị dừng. Các thuộc tính dịch vụ cần thiết cho mục đích thanh toán và quản trị có thể được giữ lại.</p>
+<p>Xin lưu ý rằng bạn không thể tạo tài khoản AWS mới sử dụng cùng bí danh hoặc địa chỉ email đã đăng ký cho tài khoản AWS đã đóng của bạn.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/vi/1-create-new-aws-account/1.3-aws-account-alias/" title="Quản lý Alias tài khoản AWS cho đăng nhập IAM"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/vi/2-mfa-setup-for-aws-user-root/" title="MFA cho Tài khoản AWS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1744570503"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744570503"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744570503"></script>
+    <script src="/js/jquery.sticky.js?1744570503"></script>
+    <script src="/js/featherlight.min.js?1744570503"></script>
+    <script src="/js/highlight.pack.js?1744570503"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744570503"></script>
+    <script src="/js/learn.js?1744570503"></script>
+    <script src="/js/hugo-learn.js?1744570503"></script>
+
+    <link href="/mermaid/mermaid.css?1744570503" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744570503"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158079754-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
