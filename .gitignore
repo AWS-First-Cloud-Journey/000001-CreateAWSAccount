@@ -1,0 +1,71 @@
+# Hugo build files
+public/
+.hugo_build.lock
+resources/_gen/
+
+# Large binary files (use Git LFS instead)
+*.tar.gz
+*.zip
+*.exe
+*.dmg
+*.pkg
+*.deb
+*.rpm
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if using npm/yarn)
+node_modules/
+
+# Log files
+*.log
+logs/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Backup files
+*.bak
+*.backup
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Hugo theme submodules (if using git submodules)
+themes/*/
+
+# Large media files (consider using Git LFS)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.mp3
+*.wav
+*.flac
+
+# Large image files over 10MB (consider using Git LFS)
+# Uncomment if you have very large images
+# *.psd
+# *.ai
+# *.tiff
+# *.raw
