@@ -1,6 +1,6 @@
 ---
 title: "Tạo mới tài khoản AWS"
-date: "2025-04-11"
+date: "2024-09-23"
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "

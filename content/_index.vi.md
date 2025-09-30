@@ -1,6 +1,6 @@
 +++
 title = "Thiết lập Tài Khoản AWS"
-date = 2021
+date = 2024
 weight = 1
 chapter = false
 +++
@@ -11,14 +11,14 @@ Tài liệu này hướng dẫn chi tiết quy trình thiết lập tài khoản
 ## Mục lục
 - [Tạo tài khoản AWS đầu tiên](#tạo-tài-khoản-aws-đầu-tiên)
 - [Thiết lập MFA cho tài khoản Root](#thiết-lập-mfa-cho-tài-khoản-root)
-- [Tạo Admin Group và Admin User](#tạo-admin-group-và-admin-user)
+- [Tạo Nhóm Quản trị và Người dùng Quản trị](#tạo-nhóm-quản-trị-và-người-dùng-quản-trị)
 - [Hỗ trợ xác thực tài khoản](#hỗ-trợ-xác-thực-tài-khoản)
 - [Khám phá AWS Management Console](#khám-phá-aws-management-console)
 
 ## Tạo tài khoản AWS đầu tiên
 
 ### Tổng quan
-Trong phần này, bạn sẽ tạo mới **tài khoản AWS**, thiết lập **MFA** (Multi-factor Authentication) để bảo vệ tài khoản. Tiếp theo, bạn sẽ tạo **Admin Group** và **Admin User** để quản lý tài nguyên AWS thay vì sử dụng tài khoản root. Cuối cùng, nếu gặp vấn đề trong quá trình xác thực, bạn sẽ được hướng dẫn liên hệ **AWS Support**.
+Trong phần này, bạn sẽ tạo mới **tài khoản AWS**, thiết lập **MFA** (Multi-factor Authentication) để bảo vệ tài khoản. Tiếp theo, bạn sẽ tạo **Nhóm Quản trị** và **Người dùng Quản trị** để quản lý tài nguyên AWS thay vì sử dụng tài khoản root. Cuối cùng, nếu gặp vấn đề trong quá trình xác thực, bạn sẽ được hướng dẫn liên hệ **Hỗ trợ AWS**.
 
 ### Các khái niệm cơ bản
 
@@ -34,7 +34,7 @@ Trong phần này, bạn sẽ tạo mới **tài khoản AWS**, thiết lập **
 **IAM Group** là công cụ quản lý người dùng của AWS, cho phép gom nhiều IAM User vào một nhóm. Tất cả IAM User trong cùng một nhóm sẽ được thừa hưởng các quyền được gán cho nhóm đó, giúp quản lý quyền dễ dàng hơn.
 
 #### IAM User
-**IAM User** là đơn vị người dùng trong AWS. Mỗi IAM User có thông tin đăng nhập riêng và được cấp quyền truy cập cụ thể vào tài nguyên AWS. IAM User được tạo để cấp quyền truy cập **dài hạn** vào tài khoản AWS.
+**IAM User** là đơn vị người dùng trong AWS. Mỗi IAM User có thông tin đăng nhập riêng và được cấp quyền truy cập cụ thể vào tài nguyên AWS. IAM User thích hợp cho việc cấp quyền truy cập **dài hạn** cho con người hoặc ứng dụng cần truy cập AWS.
 
 #### AWS Support
 **AWS Support** là đơn vị cung cấp dịch vụ hỗ trợ khách hàng của AWS, giúp giải quyết các vấn đề kỹ thuật và hỗ trợ xác thực tài khoản.
@@ -58,11 +58,11 @@ Trong phần này, bạn sẽ tạo mới **tài khoản AWS**, thiết lập **
 #### Bước 3: Tạo mật khẩu
 1. Tạo mật khẩu mạnh cho tài khoản AWS của bạn
 2. Mật khẩu cần đáp ứng các yêu cầu sau:
-   - Tối thiểu 8 ký tự
-   - Bao gồm ít nhất một chữ cái viết hoa
-   - Bao gồm ít nhất một chữ cái viết thường
-   - Bao gồm ít nhất một số
-   - Bao gồm ít nhất một ký tự đặc biệt
+   - Tối thiểu 8 ký tự, tối đa 128 ký tự
+   - Bao gồm ít nhất một chữ cái viết hoa (A-Z)
+   - Bao gồm ít nhất một chữ cái viết thường (a-z)
+   - Bao gồm ít nhất một số (0-9)
+   - Bao gồm ít nhất một ký tự đặc biệt (!@#$%^&*()_+-=[]{}|;':\",./<>?)
 
 #### Bước 4: Điền thông tin liên hệ
 1. Chọn loại tài khoản (Cá nhân hoặc Doanh nghiệp)
@@ -115,7 +115,7 @@ Trong phần này, bạn sẽ tạo mới **tài khoản AWS**, thiết lập **
 1. Lưu mã QR hoặc khóa bí mật được cung cấp trong quá trình thiết lập
 2. Lưu trữ an toàn thông tin này để phòng trường hợp mất thiết bị
 
-### Tạo Admin Group và Admin User
+### Tạo Nhóm Quản trị và Người dùng Quản trị
 
 #### Bước 1: Truy cập dịch vụ IAM
 1. Đăng nhập vào AWS Management Console bằng tài khoản root

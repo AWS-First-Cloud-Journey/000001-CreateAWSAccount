@@ -14,7 +14,7 @@ In this first lab, you will create your new **AWS** account and use Multi-Factor
 **An AWS account** is the fundamental container for all the AWS resources you can create as an AWS customer. By default, each AWS account includes a _root user_. The _root user_ has full access within your AWS account, and root user permissions cannot be restricted. When you first create your AWS account, you will access it as the _root user_.
 
 {{% notice note%}}
-As a best practice, avoid using the AWS account _root user_ for any task where it's not necessary. Instead, create a new IAM user for each person requiring administrator access. Subsequently, users in the administrators user group should set up the user groups, users, and so on, for the AWS account. All future interactions should be through the AWS account's users and their own keys instead of the root user. However, to perform certain account and service management tasks, you must log in using the root user credentials.
+As a best practice, avoid using the AWS account _root user_ for any task where it's not necessary. Instead, create a new IAM user for each person requiring administrator access. Subsequently, users in the administrators group should set up additional user groups, users, and so on, for the AWS account. All future interactions should be through the AWS account's users and their own keys instead of the root user. However, to perform certain account and service management tasks, you must log in using the root user credentials.
 {{% /notice%}}
 
 #### Multi-Factor Authentication (MFA)
