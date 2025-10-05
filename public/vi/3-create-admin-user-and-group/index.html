@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.150.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo Admin Group và Admin User :: Tạo mới tài khoản AWS</title>
 
     
-    <link href="/css/nucleus.css?1744570503" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1744570503" rel="stylesheet">
-    <link href="/css/hybrid.css?1744570503" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1744570503" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1744570503" rel="stylesheet">
-    <link href="/css/auto-complete.css?1744570503" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1744570503" rel="stylesheet">
-    <link href="/css/theme.css?1744570503" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1744570503" rel="stylesheet">
+    <link href="/css/nucleus.css?1759647258" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759647258" rel="stylesheet">
+    <link href="/css/hybrid.css?1759647258" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759647258" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759647258" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759647258" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759647258" rel="stylesheet">
+    <link href="/css/theme.css?1759647258" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759647258" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1744570503" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759647258" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1744570503"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759647258"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1744570503"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1744570503"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759647258"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759647258"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1744570503"></script>
+<script type="text/javascript" src="/js/search.js?1759647258"></script>
 
     
   </div>
@@ -583,7 +583,7 @@
                   
                     
                     
-                      <option id="en" value="/3-create-admin-user-and-group/">English</option>
+                      <option id="en" value="//localhost:1313/3-create-admin-user-and-group/">English</option>
                     
                   
               
@@ -597,7 +597,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/3-create-admin-user-and-group/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/3-create-admin-user-and-group/" selected>Tiếng Việt</option>
                     
                   
               
@@ -734,34 +734,33 @@
 </li>
 <li>
 <p>Nhấn vào tên tài khoản ở góc trên bên phải và chọn <strong>My Security Credentials</strong></p>
-<p><img alt="Truy cập Security Credentials" src="/images/01/0001.png"></p>
+<p><img src="/images/01/0001.png" alt="Truy cập Security Credentials"></p>
 <blockquote>
-<p><strong>Lưu ý:</strong> Nếu không thấy menu <strong>My Security Credentials</strong>, bạn có thể tìm kiếm và chọn dịch vụ <strong>IAM</strong> để truy cập vào IAM console.</p>
-</blockquote>
-<p><img alt="Tìm kiếm dịch vụ IAM" src="/images/01/0002.png"></p>
+<p><strong>Lưu ý:</strong> Nếu không thấy menu <strong>My Security Credentials</strong>, bạn có thể tìm kiếm và chọn dịch vụ <strong>IAM</strong> để truy cập vào IAM console.</p></blockquote>
+<p><img src="/images/01/0002.png" alt="Tìm kiếm dịch vụ IAM"></p>
 </li>
 <li>
 <p>Trong navigation pane bên trái, chọn <strong>User Groups</strong> và nhấn <strong>Create Group</strong></p>
-<p><img alt="Tạo User Group" src="/images/01/0003.png"></p>
+<p><img src="/images/01/0003.png" alt="Tạo User Group"></p>
 </li>
 <li>
 <p>Trong mục <strong>User group name</strong>, nhập tên group (ví dụ: <em>AdminGroup</em>)</p>
-<p><img alt="Đặt tên User Group" src="/images/01/0004.png"></p>
+<p><img src="/images/01/0004.png" alt="Đặt tên User Group"></p>
 </li>
 <li>
 <p>Trong phần <strong>Attach permissions policies</strong>, tìm và chọn policy <strong>AdministratorAccess</strong>. Sau đó chọn <strong>Create Group</strong></p>
-<p><img alt="Gán permissions" src="/images/01/0005.png"></p>
+<p><img src="/images/01/0005.png" alt="Gán permissions"></p>
 </li>
 <li>
 <p>Group đã được tạo thành công</p>
-<p><img alt="Hoàn thành tạo group" src="/images/01/0006.png"></p>
+<p><img src="/images/01/0006.png" alt="Hoàn thành tạo group"></p>
 </li>
 </ol>
 <h4 id="tạo-admin-user">Tạo Admin User</h4>
 <ol>
 <li>
 <p>Trong navigation pane, chọn <strong>Users</strong> và nhấn <strong>Add users</strong></p>
-<p><img alt="Tạo User mới" src="/images/02/0001.png"></p>
+<p><img src="/images/02/0001.png" alt="Tạo User mới"></p>
 </li>
 <li>
 <p>Cấu hình thông tin user:</p>
@@ -773,39 +772,38 @@
 <li>Bỏ chọn <strong>User must create a new password at next sign-in</strong></li>
 <li>Nhấn <strong>Next: Permissions</strong></li>
 </ul>
-<p><img alt="Cấu hình User" src="/images/02/0002.png"></p>
+<p><img src="/images/02/0002.png" alt="Cấu hình User"></p>
 </li>
 <li>
 <p>Chọn tab <strong>Add user to group</strong> và chọn group <strong>AdminGroup</strong> đã tạo</p>
-<p><img alt="Thêm user vào group" src="/images/02/0003.png"></p>
+<p><img src="/images/02/0003.png" alt="Thêm user vào group"></p>
 </li>
 <li>
 <p>Nhấn <strong>Next: Tags</strong> (Tags là tùy chọn để tổ chức và quản lý tài nguyên)</p>
 </li>
 <li>
 <p>Nhấn <strong>Next: Review</strong></p>
-<p><img alt="Review thông tin" src="/images/02/0004.png"></p>
+<p><img src="/images/02/0004.png" alt="Review thông tin"></p>
 </li>
 <li>
 <p>Kiểm tra lại thông tin và chọn <strong>Create user</strong></p>
-<p><img alt="Xác nhận tạo user" src="/images/02/0005.png"></p>
+<p><img src="/images/02/0005.png" alt="Xác nhận tạo user"></p>
 </li>
 <li>
 <p>Tải xuống file .csv chứa access key (nếu cần)</p>
-<p><img alt="Download credentials" src="/images/02/0006.png"></p>
+<p><img src="/images/02/0006.png" alt="Download credentials"></p>
 </li>
 <li>
 <p>User đã được tạo thành công</p>
-<p><img alt="Hoàn thành tạo user" src="/images/02/0007.png"></p>
+<p><img src="/images/02/0007.png" alt="Hoàn thành tạo user"></p>
 </li>
 <li>
 <p>Xem chi tiết thông tin user</p>
-<p><img alt="Chi tiết user" src="/images/02/0008.png"></p>
+<p><img src="/images/02/0008.png" alt="Chi tiết user"></p>
 </li>
 </ol>
 <blockquote>
-<p><strong>Lưu ý:</strong> Sau khi tạo user, AWS sẽ hiển thị access key ID và secret access key. Đây là thông tin quan trọng để truy cập AWS thông qua AWS CLI và AWS SDK.</p>
-</blockquote>
+<p><strong>Lưu ý:</strong> Sau khi tạo user, AWS sẽ hiển thị access key ID và secret access key. Đây là thông tin quan trọng để truy cập AWS thông qua AWS CLI và AWS SDK.</p></blockquote>
 <h4 id="đăng-nhập-với-admin-user">Đăng nhập với Admin User</h4>
 <ol>
 <li>
@@ -816,11 +814,11 @@
 </li>
 <li>
 <p>Trong tab <strong>Security credentials</strong>, copy đường link console sign-in</p>
-<p><img alt="Copy sign-in link" src="/images/03/0001.png"></p>
+<p><img src="/images/03/0001.png" alt="Copy sign-in link"></p>
 </li>
 <li>
 <p>Mở tab ẩn danh mới và truy cập link sign-in</p>
-<p><img alt="Truy cập bằng tab ẩn danh" src="/images/03/0002.png"></p>
+<p><img src="/images/03/0002.png" alt="Truy cập bằng tab ẩn danh"></p>
 </li>
 <li>
 <p>Nhập thông tin đăng nhập:</p>
@@ -829,11 +827,11 @@
 <li>Password đã tạo</li>
 <li>Nhấn <strong>Sign in</strong></li>
 </ul>
-<p><img alt="Đăng nhập IAM user" src="/images/03/0003.png"></p>
+<p><img src="/images/03/0003.png" alt="Đăng nhập IAM user"></p>
 </li>
 <li>
 <p>Đăng nhập thành công với IAM user</p>
-<p><img alt="Đăng nhập thành công" src="/images/03/0004.png"></p>
+<p><img src="/images/03/0004.png" alt="Đăng nhập thành công"></p>
 </li>
 </ol>
 <h4 id="tài-liệu-tham-khảo">Tài liệu tham khảo</h4>
@@ -866,8 +864,7 @@
 <li>
 <p>Trong phần <strong>Access keys</strong>, chọn <strong>Create access key</strong></p>
 <blockquote>
-<p><strong>Lưu ý:</strong> Nếu không thấy tùy chọn này, có thể bạn đã đạt giới hạn số lượng access key. Cần xóa một key hiện có trước khi tạo mới.</p>
-</blockquote>
+<p><strong>Lưu ý:</strong> Nếu không thấy tùy chọn này, có thể bạn đã đạt giới hạn số lượng access key. Cần xóa một key hiện có trước khi tạo mới.</p></blockquote>
 </li>
 <li>
 <p>Trên trang <strong>Alternatives to root user access keys</strong>, đọc các khuyến nghị bảo mật. Tích vào checkbox và chọn <strong>Create access key</strong></p>
@@ -886,8 +883,7 @@
 </li>
 </ol>
 <blockquote>
-<p><strong>Khuyến nghị:</strong> Nên xóa hoặc vô hiệu hóa access key khi không còn sử dụng để đảm bảo an toàn.</p>
-</blockquote>
+<p><strong>Khuyến nghị:</strong> Nên xóa hoặc vô hiệu hóa access key khi không còn sử dụng để đảm bảo an toàn.</p></blockquote>
 <h4 id="xóa-access-key-cho-root-user">Xóa Access Key cho Root User</h4>
 <h4 id="quyền-yêu-cầu-1">Quyền yêu cầu</h4>
 <ul>
@@ -922,8 +918,7 @@
 <li>Key bị vô hiệu hóa có thể kích hoạt lại sau này</li>
 <li>Không cần thay đổi ID và Secret</li>
 <li>Các API call sử dụng key đã vô hiệu hóa sẽ bị từ chối với lỗi &ldquo;access denied&rdquo;</li>
-</ul>
-</blockquote>
+</ul></blockquote>
 <p>Best Practices:</p>
 <ul>
 <li>Hạn chế sử dụng access key của root user</li>
@@ -946,8 +941,7 @@
 <li>U2F security key</li>
 </ul>
 <blockquote>
-<p><strong>Khuyến nghị:</strong> Nên bật MFA cho cả root user và IAM user để tăng cường bảo mật.</p>
-</blockquote>
+<p><strong>Khuyến nghị:</strong> Nên bật MFA cho cả root user và IAM user để tăng cường bảo mật.</p></blockquote>
 <p>Tham khảo thêm:</p>
 <ul>
 <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/">IAM User Guide</a></li>
@@ -1294,19 +1288,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1744570503"></script>
-    <script src="/js/perfect-scrollbar.min.js?1744570503"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1744570503"></script>
-    <script src="/js/jquery.sticky.js?1744570503"></script>
-    <script src="/js/featherlight.min.js?1744570503"></script>
-    <script src="/js/highlight.pack.js?1744570503"></script>
+    <script src="/js/clipboard.min.js?1759647258"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759647258"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759647258"></script>
+    <script src="/js/jquery.sticky.js?1759647258"></script>
+    <script src="/js/featherlight.min.js?1759647258"></script>
+    <script src="/js/highlight.pack.js?1759647258"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1744570503"></script>
-    <script src="/js/learn.js?1744570503"></script>
-    <script src="/js/hugo-learn.js?1744570503"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759647258"></script>
+    <script src="/js/learn.js?1759647258"></script>
+    <script src="/js/hugo-learn.js?1759647258"></script>
 
-    <link href="/mermaid/mermaid.css?1744570503" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1744570503"></script>
+    <link href="/mermaid/mermaid.css?1759647258" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759647258"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
