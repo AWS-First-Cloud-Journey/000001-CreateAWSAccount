@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.150.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Thiết lập Tài Khoản AWS :: Tạo mới tài khoản AWS</title>
 
     
-    <link href="/css/nucleus.css?1744570503" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1744570503" rel="stylesheet">
-    <link href="/css/hybrid.css?1744570503" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1744570503" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1744570503" rel="stylesheet">
-    <link href="/css/auto-complete.css?1744570503" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1744570503" rel="stylesheet">
-    <link href="/css/theme.css?1744570503" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1744570503" rel="stylesheet">
+    <link href="/css/nucleus.css?1759647258" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759647258" rel="stylesheet">
+    <link href="/css/hybrid.css?1759647258" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759647258" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759647258" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759647258" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759647258" rel="stylesheet">
+    <link href="/css/theme.css?1759647258" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759647258" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1744570503" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759647258" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1744570503"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759647258"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1744570503"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1744570503"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759647258"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759647258"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1744570503"></script>
+<script type="text/javascript" src="/js/search.js?1759647258"></script>
 
     
   </div>
@@ -583,7 +583,7 @@
                   
                     
                     
-                      <option id="en" value="/">English</option>
+                      <option id="en" value="//localhost:1313/">English</option>
                     
                   
               
@@ -597,7 +597,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/" selected>Tiếng Việt</option>
                     
                   
               
@@ -679,27 +679,26 @@
 <p>Tài liệu này hướng dẫn chi tiết quy trình thiết lập tài khoản AWS từ đầu, bao gồm tạo tài khoản, cấu hình bảo mật, và thiết lập quyền quản trị. Hướng dẫn này giúp bạn bắt đầu sử dụng AWS một cách an toàn và hiệu quả.</p>
 <h2 id="mục-lục">Mục lục</h2>
 <ul>
-<li><a href="/vi/#tạo-tài-khoản-aws-đầu-tiên">Tạo tài khoản AWS đầu tiên</a></li>
-<li><a href="/vi/#thiết-lập-mfa-cho-tài-khoản-root">Thiết lập MFA cho tài khoản Root</a></li>
-<li><a href="/vi/#tạo-admin-group-và-admin-user">Tạo Admin Group và Admin User</a></li>
-<li><a href="/vi/#hỗ-trợ-xác-thực-tài-khoản">Hỗ trợ xác thực tài khoản</a></li>
-<li><a href="/vi/#khám-phá-aws-management-console">Khám phá AWS Management Console</a></li>
+<li><a href="/vi/#t%e1%ba%a1o-t%c3%a0i-kho%e1%ba%a3n-aws-%c4%91%e1%ba%a7u-ti%c3%aan">Tạo tài khoản AWS đầu tiên</a></li>
+<li><a href="/vi/#thi%e1%ba%bft-l%e1%ba%adp-mfa-cho-t%c3%a0i-kho%e1%ba%a3n-root">Thiết lập MFA cho tài khoản Root</a></li>
+<li><a href="/vi/#t%e1%ba%a1o-nh%c3%b3m-qu%e1%ba%a3n-tr%e1%bb%8b-v%c3%a0-ng%c6%b0%e1%bb%9di-d%c3%b9ng-qu%e1%ba%a3n-tr%e1%bb%8b">Tạo Nhóm Quản trị và Người dùng Quản trị</a></li>
+<li><a href="/vi/#h%e1%bb%97-tr%e1%bb%a3-x%c3%a1c-th%e1%bb%b1c-t%c3%a0i-kho%e1%ba%a3n">Hỗ trợ xác thực tài khoản</a></li>
+<li><a href="/vi/#kh%c3%a1m-ph%c3%a1-aws-management-console">Khám phá AWS Management Console</a></li>
 </ul>
 <h2 id="tạo-tài-khoản-aws-đầu-tiên">Tạo tài khoản AWS đầu tiên</h2>
 <h3 id="tổng-quan">Tổng quan</h3>
-<p>Trong phần này, bạn sẽ tạo mới <strong>tài khoản AWS</strong>, thiết lập <strong>MFA</strong> (Multi-factor Authentication) để bảo vệ tài khoản. Tiếp theo, bạn sẽ tạo <strong>Admin Group</strong> và <strong>Admin User</strong> để quản lý tài nguyên AWS thay vì sử dụng tài khoản root. Cuối cùng, nếu gặp vấn đề trong quá trình xác thực, bạn sẽ được hướng dẫn liên hệ <strong>AWS Support</strong>.</p>
+<p>Trong phần này, bạn sẽ tạo mới <strong>tài khoản AWS</strong>, thiết lập <strong>MFA</strong> (Multi-factor Authentication) để bảo vệ tài khoản. Tiếp theo, bạn sẽ tạo <strong>Nhóm Quản trị</strong> và <strong>Người dùng Quản trị</strong> để quản lý tài nguyên AWS thay vì sử dụng tài khoản root. Cuối cùng, nếu gặp vấn đề trong quá trình xác thực, bạn sẽ được hướng dẫn liên hệ <strong>Hỗ trợ AWS</strong>.</p>
 <h3 id="các-khái-niệm-cơ-bản">Các khái niệm cơ bản</h3>
 <h4 id="tài-khoản-aws-aws-account">Tài khoản AWS (AWS Account)</h4>
 <p><strong>Tài khoản AWS</strong> là phương tiện để truy cập và sử dụng các dịch vụ AWS. Mỗi tài khoản mặc định có một <strong>root user</strong> với toàn quyền quản trị không thể giới hạn. Khi đăng nhập lần đầu, bạn sẽ sử dụng tài khoản root user này.</p>
 <blockquote>
-<p><strong>Lưu ý</strong>: AWS khuyến nghị không sử dụng root user cho các tác vụ hàng ngày. Thay vào đó, hãy tạo IAM User với quyền quản trị phù hợp để giảm thiểu rủi ro bảo mật.</p>
-</blockquote>
+<p><strong>Lưu ý</strong>: AWS khuyến nghị không sử dụng root user cho các tác vụ hàng ngày. Thay vào đó, hãy tạo IAM User với quyền quản trị phù hợp để giảm thiểu rủi ro bảo mật.</p></blockquote>
 <h4 id="mfa-multi-factor-authentication">MFA (Multi-factor Authentication)</h4>
 <p><strong>MFA</strong> là tính năng bảo mật nâng cao cho tài khoản AWS. Khi kích hoạt, bạn sẽ cần nhập mã OTP (One-time Password) mỗi lần đăng nhập vào tài khoản AWS, tạo lớp bảo vệ thứ hai ngoài mật khẩu thông thường.</p>
 <h4 id="iam-group">IAM Group</h4>
 <p><strong>IAM Group</strong> là công cụ quản lý người dùng của AWS, cho phép gom nhiều IAM User vào một nhóm. Tất cả IAM User trong cùng một nhóm sẽ được thừa hưởng các quyền được gán cho nhóm đó, giúp quản lý quyền dễ dàng hơn.</p>
 <h4 id="iam-user">IAM User</h4>
-<p><strong>IAM User</strong> là đơn vị người dùng trong AWS. Mỗi IAM User có thông tin đăng nhập riêng và được cấp quyền truy cập cụ thể vào tài nguyên AWS. IAM User được tạo để cấp quyền truy cập <strong>dài hạn</strong> vào tài khoản AWS.</p>
+<p><strong>IAM User</strong> là đơn vị người dùng trong AWS. Mỗi IAM User có thông tin đăng nhập riêng và được cấp quyền truy cập cụ thể vào tài nguyên AWS. IAM User thích hợp cho việc cấp quyền truy cập <strong>dài hạn</strong> cho con người hoặc ứng dụng cần truy cập AWS.</p>
 <h4 id="aws-support">AWS Support</h4>
 <p><strong>AWS Support</strong> là đơn vị cung cấp dịch vụ hỗ trợ khách hàng của AWS, giúp giải quyết các vấn đề kỹ thuật và hỗ trợ xác thực tài khoản.</p>
 <h4 id="aws-management-console">AWS Management Console</h4>
@@ -722,11 +721,11 @@
 <li>Tạo mật khẩu mạnh cho tài khoản AWS của bạn</li>
 <li>Mật khẩu cần đáp ứng các yêu cầu sau:
 <ul>
-<li>Tối thiểu 8 ký tự</li>
-<li>Bao gồm ít nhất một chữ cái viết hoa</li>
-<li>Bao gồm ít nhất một chữ cái viết thường</li>
-<li>Bao gồm ít nhất một số</li>
-<li>Bao gồm ít nhất một ký tự đặc biệt</li>
+<li>Tối thiểu 8 ký tự, tối đa 128 ký tự</li>
+<li>Bao gồm ít nhất một chữ cái viết hoa (A-Z)</li>
+<li>Bao gồm ít nhất một chữ cái viết thường (a-z)</li>
+<li>Bao gồm ít nhất một số (0-9)</li>
+<li>Bao gồm ít nhất một ký tự đặc biệt (!@#$%^&amp;*()_+-=[]{}|;&rsquo;:&quot;,./&lt;&gt;?)</li>
 </ul>
 </li>
 </ol>
@@ -793,7 +792,7 @@
 <li>Lưu mã QR hoặc khóa bí mật được cung cấp trong quá trình thiết lập</li>
 <li>Lưu trữ an toàn thông tin này để phòng trường hợp mất thiết bị</li>
 </ol>
-<h3 id="tạo-admin-group-và-admin-user">Tạo Admin Group và Admin User</h3>
+<h3 id="tạo-nhóm-quản-trị-và-người-dùng-quản-trị">Tạo Nhóm Quản trị và Người dùng Quản trị</h3>
 <h4 id="bước-1-truy-cập-dịch-vụ-iam">Bước 1: Truy cập dịch vụ IAM</h4>
 <ol>
 <li>Đăng nhập vào AWS Management Console bằng tài khoản root</li>
@@ -1231,19 +1230,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1744570503"></script>
-    <script src="/js/perfect-scrollbar.min.js?1744570503"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1744570503"></script>
-    <script src="/js/jquery.sticky.js?1744570503"></script>
-    <script src="/js/featherlight.min.js?1744570503"></script>
-    <script src="/js/highlight.pack.js?1744570503"></script>
+    <script src="/js/clipboard.min.js?1759647258"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759647258"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759647258"></script>
+    <script src="/js/jquery.sticky.js?1759647258"></script>
+    <script src="/js/featherlight.min.js?1759647258"></script>
+    <script src="/js/highlight.pack.js?1759647258"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1744570503"></script>
-    <script src="/js/learn.js?1744570503"></script>
-    <script src="/js/hugo-learn.js?1744570503"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759647258"></script>
+    <script src="/js/learn.js?1759647258"></script>
+    <script src="/js/hugo-learn.js?1759647258"></script>
 
-    <link href="/mermaid/mermaid.css?1744570503" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1744570503"></script>
+    <link href="/mermaid/mermaid.css?1759647258" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759647258"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
