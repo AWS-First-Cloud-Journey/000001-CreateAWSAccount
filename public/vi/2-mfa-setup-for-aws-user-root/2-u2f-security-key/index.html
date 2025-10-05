@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.150.1">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Khóa bảo mật U2F :: Tạo mới tài khoản AWS</title>
 
     
-    <link href="/css/nucleus.css?1744570503" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1744570503" rel="stylesheet">
-    <link href="/css/hybrid.css?1744570503" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1744570503" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1744570503" rel="stylesheet">
-    <link href="/css/auto-complete.css?1744570503" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1744570503" rel="stylesheet">
-    <link href="/css/theme.css?1744570503" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1744570503" rel="stylesheet">
+    <link href="/css/nucleus.css?1759647258" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759647258" rel="stylesheet">
+    <link href="/css/hybrid.css?1759647258" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759647258" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759647258" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759647258" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759647258" rel="stylesheet">
+    <link href="/css/theme.css?1759647258" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759647258" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1744570503" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759647258" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1744570503"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759647258"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1744570503"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1744570503"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759647258"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759647258"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1744570503"></script>
+<script type="text/javascript" src="/js/search.js?1759647258"></script>
 
     
   </div>
@@ -583,7 +583,7 @@
                   
                     
                     
-                      <option id="en" value="/2-mfa-setup-for-aws-user-root/2-u2f-security-key/">English</option>
+                      <option id="en" value="//localhost:1313/2-mfa-setup-for-aws-user-root/2-u2f-security-key/">English</option>
                     
                   
               
@@ -597,7 +597,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/" selected>Tiếng Việt</option>
                     
                   
               
@@ -701,7 +701,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -725,7 +733,62 @@
 
 
 
-	
+	<p><strong>Nội dung</strong></p>
+<ul>
+<li><a href="/vi/2-mfa-setup-for-aws-user-root/2-u2f-security-key/#k%c3%adch-ho%e1%ba%a1t-kh%c3%b3a-b%e1%ba%a3o-m%e1%ba%adt-u2f-qua-console">Kích hoạt khóa bảo mật U2F qua Console</a></li>
+</ul>
+
+<div class="notices tip" ><p>Nếu bạn không có thiết bị phần cứng, bạn có thể bỏ qua các bước bên dưới.</p>
+</div>
+
+<h4 id="kích-hoạt-khóa-bảo-mật-u2f-qua-console">Kích hoạt khóa bảo mật U2F qua Console</h4>
+<p><strong>U2F Security Key</strong> là một giao thức xác thực mở cho phép người dùng truy cập các dịch vụ trực tuyến bằng một khóa bảo mật vật lý duy nhất mà không cần cài phần mềm.</p>
+<ol>
+<li>
+<p>Đăng nhập vào <strong>AWS Management Console</strong>.</p>
+</li>
+<li>
+<p>Ở góc trên bên phải, chọn tên tài khoản → <strong>My Security Credentials</strong>, sau đó mở rộng <strong>Multi-factor authentication (MFA)</strong>.</p>
+</li>
+<li>
+<p>Để quản lý khóa bảo mật U2F, bạn cần có quyền từ tập quyền sau.<br>
+Ở thanh bên trái, chọn <strong>Policies</strong> → <strong>Create policy</strong> → tab <strong>JSON</strong> và dán đoạn sau:</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Version&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Statement&#34;</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Sid&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;AllowManageOwnUserMFA&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Effect&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Action&#34;</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:DeactivateMFADevice&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:EnableMFADevice&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:GetUser&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:ListMFADevices&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:ResyncMFADevice&#34;</span>
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Resource&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;arn:aws:iam::*:user/${aws:username}&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Sid&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;DenyAllExceptListedIfNoMFA&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Effect&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Deny&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;NotAction&#34;</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:EnableMFADevice&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:GetUser&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:ListMFADevices&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;iam:ResyncMFADevice&#34;</span>
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Resource&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;arn:aws:iam::*:user/${aws:username}&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Condition&#34;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;BoolIfExists&#34;</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;aws:MultiFactorAuthPresent&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;false&#34;</span>
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
 
 
 
@@ -1069,19 +1132,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1744570503"></script>
-    <script src="/js/perfect-scrollbar.min.js?1744570503"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1744570503"></script>
-    <script src="/js/jquery.sticky.js?1744570503"></script>
-    <script src="/js/featherlight.min.js?1744570503"></script>
-    <script src="/js/highlight.pack.js?1744570503"></script>
+    <script src="/js/clipboard.min.js?1759647258"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759647258"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759647258"></script>
+    <script src="/js/jquery.sticky.js?1759647258"></script>
+    <script src="/js/featherlight.min.js?1759647258"></script>
+    <script src="/js/highlight.pack.js?1759647258"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1744570503"></script>
-    <script src="/js/learn.js?1744570503"></script>
-    <script src="/js/hugo-learn.js?1744570503"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759647258"></script>
+    <script src="/js/learn.js?1759647258"></script>
+    <script src="/js/hugo-learn.js?1759647258"></script>
 
-    <link href="/mermaid/mermaid.css?1744570503" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1744570503"></script>
+    <link href="/mermaid/mermaid.css?1759647258" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759647258"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
