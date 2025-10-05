@@ -1,6 +1,6 @@
 ---
 title : "Đóng tài khoản AWS độc lập"
-date : "`r Sys.Date()`"
+date : "2025-10-05"
 weight : 4
 chapter : false
 pre : " <b> 1.4 </b> "

@@ -1,6 +1,6 @@
 ---
 title : "Create Admin Group and Admin User"
-date : "`r Sys.Date()`"
+date : "2025-10-05"
 weight : 3
 chapter : false
 pre : " <b> 3. </b> "
@@ -119,7 +119,7 @@ Incognito tab login allows you to log in to AWS with an IAM User without having 
 
 ![AWS IAM](/images/03/0003.png?featherlight=false&width=90pc)
 
-6. Congratulations, you have successfully accessed your account as an IAM User **AdminUser**.
+1. Congratulations, you have successfully accessed your account as an IAM User **AdminUser**.
 
 
 ![AWS IAM](/images/03/0004.png?featherlight=false&width=90pc)

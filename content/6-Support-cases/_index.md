@@ -1,6 +1,6 @@
 ---
 title : "Creating Support Cases and Case Management in AWS"
-date :  "`r Sys.Date()`" 
+date :  "2025-10-05" 
 weight : 6
 chapter : false
 pre : " <b> 6. </b> "

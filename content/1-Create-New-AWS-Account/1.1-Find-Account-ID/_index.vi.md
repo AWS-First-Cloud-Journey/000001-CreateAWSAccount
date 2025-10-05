@@ -1,6 +1,6 @@
 ---
 title: "Xem Định Danh Tài Khoản AWS"
-date: "2025-04-11"
+date: "2025-10-05"
 weight: 1
 chapter: false
 pre: " <b> 1.1 </b> "

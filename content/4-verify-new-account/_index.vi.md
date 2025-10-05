@@ -1,6 +1,6 @@
 ---
 title : "Hỗ trợ Xác thực Tài khoản"
-date :  "`r Sys.Date()`" 
+date :  "2025-10-05" 
 weight : 4
 chapter : false
 pre : " <b> 4. </b> "

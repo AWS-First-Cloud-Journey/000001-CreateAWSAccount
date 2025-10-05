@@ -1,6 +1,6 @@
 ---
 title : "Quản lý Alias tài khoản AWS cho đăng nhập IAM"
-date : "`r Sys.Date()`"
+date : "2025-10-05"
 weight : 3
 chapter : false
 pre : " <b> 1.3 </b> "

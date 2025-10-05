@@ -1,6 +1,6 @@
 ---
 title: "Tạo và Quản Lý Các Trường Hợp Hỗ Trợ trong AWS"
-date: "`r Sys.Date()`"
+date: "2025-10-05"
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "

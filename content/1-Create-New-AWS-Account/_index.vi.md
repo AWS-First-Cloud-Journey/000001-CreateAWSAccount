@@ -1,6 +1,6 @@
 ---
 title: "Tạo mới tài khoản AWS"
-date: "2024-09-23"
+date: "2025-10-05"
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
@@ -11,7 +11,15 @@ pre: " <b> 1. </b> "
 Tài liệu này hướng dẫn chi tiết các bước để tạo và kích hoạt tài khoản AWS mới. Việc tạo tài khoản AWS là bước đầu tiên và quan trọng để bạn có thể sử dụng các dịch vụ đám mây của Amazon Web Services.
 
 #### Mục lục
+- [Giới thiệu](#giới-thiệu)
+- [Mục lục](#mục-lục)
 - [Hướng dẫn tạo tài khoản AWS](#hướng-dẫn-tạo-tài-khoản-aws)
+  - [Bước 1: Truy cập trang đăng ký](#bước-1-truy-cập-trang-đăng-ký)
+  - [Bước 2: Nhập thông tin cơ bản](#bước-2-nhập-thông-tin-cơ-bản)
+  - [Bước 3: Hoàn thành thông tin đăng ký](#bước-3-hoàn-thành-thông-tin-đăng-ký)
+  - [Bước 4: Xác thực email](#bước-4-xác-thực-email)
+  - [Bước 5: Thiết lập mật khẩu](#bước-5-thiết-lập-mật-khẩu)
+  - [Bước 6: Chọn loại tài khoản](#bước-6-chọn-loại-tài-khoản)
 - [Thêm phương thức thanh toán](#thêm-phương-thức-thanh-toán)
 - [Xác thực số điện thoại](#xác-thực-số-điện-thoại)
 - [Chọn gói hỗ trợ (Support Plan)](#chọn-gói-hỗ-trợ-support-plan)
