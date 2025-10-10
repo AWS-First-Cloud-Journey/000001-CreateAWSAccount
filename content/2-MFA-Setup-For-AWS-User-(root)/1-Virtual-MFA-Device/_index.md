@@ -1,63 +1,114 @@
 ---
-title : "Virtual MFA Device"
-date : "2025-10-05"
-weight : 1
-chapter : false
-pre : " <b> 2.1 </b> "
+title: "Virtual MFA Device"
+date: "2025-10-05"
+weight: 1
+chapter: false
+pre: " <b> 2.1 </b> "
 ---
 
-## Enabling Multi-Factor Authentication (MFA) on AWS
+#### Introduction
 
-**Note:** Before proceeding, ensure you are logged in to AWS using the root user.
+AWS account security is one of the most important factors to protect your cloud resources. Multi-Factor Authentication (MFA) provides an additional layer of security beyond regular login credentials. This document guides you through setting up a virtual MFA device for your AWS account.
 
-## Enable Virtual MFA Device through AWS Management Console
+#### Overview of MFA in AWS
 
-To enhance the security of your AWS account, you can set up Multi-Factor Authentication (MFA). This adds an extra layer of protection by requiring a second form of verification in addition to your password. Follow these steps to set up and activate a virtual MFA device:
+MFA requires users to provide two or more authentication factors when signing in:
+- Login credentials (username and password)
+- Authentication code from a registered MFA device
 
-1. Sign in to the AWS Management Console.
+#### Requirements
 
-2. In the upper right corner of the console, you will see your account name. Click on it and select **My Security Credentials**.
+> **Note**: To enable MFA, you need to sign in to AWS using the root account.
 
-   ![My Security Credentials](/images/2/0001.png?featherlight=false&width=90pc)
+#### Types of MFA Devices Supported by AWS
 
-3. Expand the **Multi-factor authentication (MFA)** section and select **Assign MFA**.
+AWS supports various types of MFA devices:
+- Authenticator apps
+- FIDO security keys
+- Hardware token devices
 
-   ![Assign MFA](/images/2/0002.png?featherlight=false&width=90pc)
+#### Setting Up Virtual MFA Device
 
-4. In the **Select MFA Device** interface:
+##### Step 1: Sign in to AWS Management Console
 
-   - Enter a **Device Name**.
-   - Select **MFA Device** as the **Authenticator App**.
-   - Select **Next**.
+1. Go to [AWS Console](https://aws.amazon.com/console/)
+2. Sign in with your account credentials
 
-   ![Select MFA Device](/images/2/0003.png?featherlight=false&width=90pc)
+##### Step 2: Access Security Settings
 
-5. Install a compatible authenticator app on your smartphone. You can find a list of [MFA-compatible apps here](https://aws.amazon.com/iam/features/mfa/?audit=2019q1).
+1. In the upper right corner of the screen, click on your account name
+2. Select **My Security Credentials** from the dropdown menu
 
-   ![MFA App List](/images/2/0004.png?featherlight=false&width=90pc)
+![Access security settings](/images/2/0001.png?featherlight=false&width=90pc)
 
-6. Install the authenticator extension for Google Chrome. Select **Add to Chrome**.
+##### Step 3: Set Up MFA
 
-   ![Authenticator Extension](/images/2/0005.png?featherlight=false&width=90pc)
+1. On the Security Credentials page, expand the **Multi-factor authentication (MFA)** section
+2. Click **Assign MFA**
 
-7. Use the authenticator app to generate an MFA code and enter it for confirmation.
+![Set up MFA](/images/2/0002.png?featherlight=false&width=90pc)
 
-   ![MFA Code](/images/2/0006.png?featherlight=false&width=90pc)
+##### Step 4: Select MFA Device Type
 
-8. Perform a QR code scan using the authenticator app.
+1. In the **Select MFA device** interface:
+   - Enter a name for your MFA device
+   - Select **Authenticator app** as the MFA device type
+   - Click **Next**
 
-   ![QR Code Scan](/images/2/0007.png?featherlight=false&width=90pc)
+![Select MFA device type](/images/2/0003.png?featherlight=false&width=90pc)
 
-9. After scanning the QR code, enter the generated MFA codes into the corresponding fields.
+##### Step 5: Install Authenticator App
 
-   ![Enter MFA Codes](/images/2/0008.png?featherlight=false&width=90pc)
+1. Install an authenticator app on your mobile device or browser
+   - List of [AWS-compatible MFA apps](https://aws.amazon.com/iam/features/mfa/?audit=2019q1)
 
-10. Once the codes are entered, select **Add MFA** to complete the setup.
+![Install authenticator app guide](/images/2/0004.png?featherlight=false&width=90pc)
 
-   ![Add MFA](/images/2/0009.png?featherlight=false&width=90pc)
+##### Step 6: Install Authenticator on Chrome (Optional)
 
-11. Complete the additional MFA setup steps as prompted.
+If you want to use an authenticator app on Chrome browser:
 
-   ![Additional MFA Setup](/images/2/00010.png?featherlight=false&width=90pc)
+1. Go to [Authenticator on Chrome Web Store](https://chrome.google.com/webstore/detail/authenticator/bhghoamapcdpbohphigoooaddinpkbai)
+2. Click **Add to Chrome** to install
 
-By setting up Multi-Factor Authentication, you add an extra layer of security to your AWS account, helping to protect your valuable resources and data.
+![Install Authenticator on Chrome](/images/2/0005.png?featherlight=false&width=90pc)
+
+##### Step 7: Scan QR Code
+
+1. Use the installed authenticator app to scan the QR code displayed on the AWS screen
+
+![Scan QR code](/images/2/0007.png?featherlight=false&width=90pc)
+
+##### Step 8: Confirm Setup
+
+1. After scanning the QR code, the authenticator app will start generating codes
+2. Enter two consecutive authentication codes in the corresponding fields on AWS
+3. Click **Add MFA**
+
+![Enter authentication codes](/images/2/0008.png?featherlight=false&width=90pc)
+
+##### Step 9: Complete Setup
+
+1. Confirm the request to add the MFA device
+
+![Complete setup](/images/2/0009.png?featherlight=false&width=90pc)
+
+##### Step 10: Confirm Success
+
+1. After completion, you will see a confirmation message that MFA setup was successful
+
+![MFA setup successful](/images/2/00010.png?featherlight=false&width=90pc)
+
+#### Using MFA
+
+From the next login onwards, after entering your login credentials, you will be prompted to enter an authentication code from your registered MFA device.
+
+#### Troubleshooting
+
+- **Lost MFA device**: Contact AWS Support for assistance in recovering access
+- **Authentication code not working**: Ensure your device has accurate time synchronization
+
+#### Reference Documentation
+
+- [AWS IAM MFA Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa.html)
+- [AWS Security Best Practices](https://aws.amazon.com/architecture/security-identity-compliance/)
