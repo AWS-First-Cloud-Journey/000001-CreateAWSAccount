@@ -8,17 +8,29 @@ pre = "<b>5. </b>"
 
 ![AWS Support](/images/5-console/01.png?width=70pc)
 
-"AWS Management Console" helps users securely sign in using **AWS account root user** or **AWS Identity and Access Management** (IAM) credentials.
+#### Overview of AWS Management Console
 
-In addition, although users interact with AWS services through a simple web interface, in reality we are still using tools to make calls to **AWS API**
+AWS Management Console provides a secure web interface to access and manage AWS services. It supports authentication through both AWS account root user credentials and AWS Identity and Access Management (IAM) credentials.
 
-For more information, please read the following link: [What is the AWS Management Console?](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html)
+> **ℹ️ Information**  
+> Although AWS Management Console provides a user-friendly web interface, all interactions are converted to AWS API calls behind the scenes.
 
-**Content:**
+For more detailed information, refer to: [What is the AWS Management Console?](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html)
 
-- [Set up the default Region](http://localhost:1313/5-explore-and-configure-the-aws-management-console/5.1-config-default-region/#set-up-default-region)
-- [Search for AWS services using AWS MANAGEMENT CONSOLE](http://localhost:1313/5-explore-and-configure-the-aws-management-console/5.2-search-with-the-aws-management-console/#search-with-the-aws-management-console)
-- [Add and Remove favorite AWS services](http://localhost:1313/5-explore-and-configure-the-aws-management-console/5.3-add-and-remove-favorites/#add-and-remove-favorites)
-- [Initialize and use dashboard widgets](http://localhost:1313/5-explore-and-configure-the-aws-management-console/5.4create-and-use-dashboard-widgets/#create-and-use-dashboard-widgets) 
+#### Key Features and Navigation
 
-**Note:** about AWS Command Line Interface (CLI) please refer to See more in the lab [Using AWS CLI on Amazon EC2 (Windows/Ubuntu)](https://000011.awsstudygroup.com/vi/)
+AWS Management Console includes the following key features:
+
+- [Configure Default Region](http://localhost:1313/5-explore-and-configure-the-aws-management-console/5.1-config-default-region/#set-up-default-region)
+- [Search AWS Services with AWS Management Console](http://localhost:1313/5-explore-and-configure-the-aws-management-console/5.2-search-with-the-aws-management-console/#search-with-the-aws-management-console)
+- [Add and Remove Favorite AWS Services](http://localhost:1313/5-explore-and-configure-the-aws-management-console/5.3-add-and-remove-favorites/#add-and-remove-favorites) 
+- [Create and Use Dashboard Widgets](http://localhost:1313/5-explore-and-configure-the-aws-management-console/5.4create-and-use-dashboard-widgets/#create-and-use-dashboard-widgets)
+
+> **💡 Pro Tip**  
+> Customize your AWS Management Console experience by adding frequently used services to favorites and creating personalized dashboard widgets for quick access to important metrics and resources.
+
+> **⚠️ Warning**  
+> For enhanced security, always use IAM users instead of the root account for daily operations. The root account should only be used for initial setup and critical account management tasks.
+
+> **ℹ️ Information**  
+> For AWS Command Line Interface (CLI) operations, refer to the lab: [Using AWS CLI on Amazon EC2 (Windows/Ubuntu)](https://000011.awsstudygroup.com/vi/)
