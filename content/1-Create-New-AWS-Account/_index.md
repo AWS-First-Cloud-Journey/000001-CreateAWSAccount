@@ -1,97 +1,119 @@
 ---
-title : "Create new AWS account"
-date : "2025-10-05"
-weight : 1
-chapter : false
-pre : " <b> 1. </b> "
+title: "Create New AWS Account"
+date: "2025-10-05"
+weight: 1
+chapter: false
+pre: " <b> 1. </b> "
 ---
 
-**Content:**
-- [Create an AWS account](#create-an-aws-account)
+#### Introduction
+
+This document provides detailed instructions for creating and activating a new AWS account. Creating an AWS account is the first and important step to be able to use Amazon Web Services cloud services.
+
+#### Table of Contents
+- [Introduction](#introduction)
+- [Table of Contents](#table-of-contents)
+- [AWS Account Creation Guide](#aws-account-creation-guide)
+  - [Step 1: Access the registration page](#step-1-access-the-registration-page)
+  - [Step 2: Enter basic information](#step-2-enter-basic-information)
+  - [Step 3: Complete registration information](#step-3-complete-registration-information)
+  - [Step 4: Email verification](#step-4-email-verification)
+  - [Step 5: Set up password](#step-5-set-up-password)
+  - [Step 6: Choose account type](#step-6-choose-account-type)
 - [Add payment method](#add-payment-method)
-- [Verify your phone number](#verify-your-phone-number)
+- [Verify phone number](#verify-phone-number)
 - [Select Support Plan](#select-support-plan)
-- [Wait for your account to be activated](#wait-for-your-account-to-be-activated)
-- [Important](#important)
-- [Warning](#warning)
+- [Wait for account activation](#wait-for-account-activation)
+- [Reference documentation](#reference-documentation)
 
-#### Create an AWS account
+#### AWS Account Creation Guide
 
-1. Go to the [Amazon Web Service homepage](https://aws.amazon.com/) page.
-2. Select **Create an AWS Account** in the upper right corner.
-    - ***Note:** If you don't see **Create an AWS Account**, select **Sign In to the Console** then select **Create a new AWS Account**.*
+##### Step 1: Access the registration page
 
-![Create Account](/images/1/0001.png?featherlight=false&width=90pc)
+1. Go to the [Amazon Web Services](https://aws.amazon.com/) homepage
+2. Click the **Create an AWS Account** button in the upper right corner of the page
+   
+   > **Note:** If you don't see the **Create an AWS Account** button, click **Sign In to the Console** then select **Create a new AWS Account**
 
-3. Enter email information and **AWS account name**
+![Create AWS Account](/images/1/0001.png?featherlight=false&width=90pc)
 
-![Create Account](/images/1/0002.png?featherlight=false&width=90pc)
+##### Step 2: Enter basic information
 
+1. Fill in your email address
+2. Enter your AWS account name (**AWS account name**)
+3. Click **Verify email address**
 
-4. Complete information.
+![Enter basic information](/images/1/0002.png?featherlight=false&width=90pc)
 
-![Create Account](/images/1/0003.png?featherlight=false&width=90pc)
+##### Step 3: Complete registration information
 
-5. Confirm the code sent from the email.
+Fill in all required personal information
 
-![Create Account](/images/1/0004.png?featherlight=false&width=90pc)
+![Complete information](/images/1/0003.png?featherlight=false&width=90pc)
 
-![Create Account](/images/1/0005.png?featherlight=false&width=90pc)
+##### Step 4: Email verification
 
-![Create Account](/images/1/0006.png?featherlight=false&width=90pc)
+1. Check the inbox of the registered email
+2. Enter the verification code sent to your email
 
-6. After successful email authentication. You complete the account information.
+![Email verification 1](/images/1/0004.png?featherlight=false&width=90pc)
+![Email verification 2](/images/1/0005.png?featherlight=false&width=90pc)
+![Email verification 3](/images/1/0006.png?featherlight=false&width=90pc)
 
-![Create Account](/images/1/0007.png?featherlight=false&width=90pc)
+##### Step 5: Set up password
 
+After successful email verification, proceed to set up a password for your account
 
-![Create Account](/images/1/0008.png?featherlight=false&width=90pc)
+![Set up password 1](/images/1/0007.png?featherlight=false&width=90pc)
+![Set up password 2](/images/1/0008.png?featherlight=false&width=90pc)
 
-7. Complete the account registration documents.
+##### Step 6: Choose account type
 
-- You can choose **Personal** or **Business** account
+1. Complete the account registration profile
+2. Choose the appropriate account type:
+   - **Personal** (Individual)
+   - **Business** (Enterprise)
 
-![Create Account](/images/1/0009.png?featherlight=false&width=90pc)
+![Choose account type](/images/1/0009.png?featherlight=false&width=90pc)
 
 #### Add payment method
 
-- Enter your credit card information and select **Verify and Add**.
-    - ***Note**: You can choose a different address for your account by selecting **Use a new address** before **Verify and Add**.*
+1. Enter your complete credit card or debit card information
+2. Click **Verify and Add** to confirm
 
-![Create Account](/images/1/00010.png?featherlight=false&width=90pc)
-#### Verify your phone number
+> **Note:** If you want to use a different billing address, select **Use a new address** before clicking **Verify and Add**
 
-1. Enter the phone number.
-2. Enter the security check code then select **Call me now**.
-3. AWS will contact and verify account opening.
+![Add payment method](/images/1/00010.png?featherlight=false&width=90pc)
 
-![Create Account](/images/1/00011.png?featherlight=false&width=90pc)
+#### Verify phone number
+
+1. Enter your phone number
+2. Enter the security check code
+3. Click **Call me now**
+4. AWS will call the registered phone number and provide a PIN code
+5. Enter the received PIN code to complete verification
+
+![Verify phone number](/images/1/00011.png?featherlight=false&width=90pc)
 
 #### Select Support Plan
 
-- In the **Select a support plan** page, select an effective plan, to compare plans, see [Compare AWS Support Plans](https://aws.amazon.com/premiumsupport/plans/ ).
+1. On the **Select a support plan** page, choose a support plan that fits your needs
+2. To compare support plans, refer to [Compare AWS Support Plans](https://aws.amazon.com/premiumsupport/plans/)
 
-#### Wait for your account to be activated
+> **Suggestion:** For beginners, the **Basic Support** plan (free) is usually a suitable choice
 
-- After selecting **Support plan**, the account is usually activated after a few minutes, but the process can take up to 24 hours. You will still be able to log in to your AWS account at this time, the AWS Home page may show a “Complete Sign Up” button during this time, even if you have completed all the steps in the registration section.
-- After receiving an email confirming your account has been activated, you can access all AWS services.       
-  
-#### Important
+#### Wait for account activation
 
-The following AWS Identity and Access Management (IAM) actions will reach the end of standard support on July 2023: `aws-portal:ModifyAccount` and `aws-portal:ViewAccount`. See the [Using fine-grained AWS Billing actions](link_to_documentation) to replace these actions with fine-grained actions so you have access to AWS Billing, AWS Cost Management, and AWS accounts consoles.
+- After selecting a support plan, your account is usually activated within a few minutes
+- However, the activation process can sometimes take up to 24 hours
+- During the waiting period, you can still log in to your AWS account
+- The AWS homepage may display a "Complete Sign Up" button even though you have completed all registration steps
+- You will receive a confirmation email when your account is fully activated
+- After receiving the confirmation email, you can access and use all AWS services
 
-If you created your AWS account or AWS Organizations Management account before March 6, 2023, the fine-grained actions will be effective starting July 2023. We recommend you to add the fine-grained actions, but not remove your existing permissions with `aws-portal` or `purchase-orders` prefixes.
+#### Reference documentation
 
-If you created your AWS account or AWS Organizations Management account on or after March 6, 2023, the fine-grained actions are effective immediately.
-
-AWS assigns the following unique identifiers to each AWS account:
-
-- **AWS account ID**: A 12-digit number, such as `012345678901`, that uniquely identifies an AWS account. Many AWS resources include the account ID in their Amazon Resource Names (ARNs). The account ID portion distinguishes resources in one account from the resources in another account. If you're an AWS Identity and Access Management (IAM) user, you can sign in to the AWS Management Console using either the account ID or account alias. While account IDs, like any identifying information, should be used and shared carefully, they are not considered secret, sensitive, or confidential information.
-
-- **Canonical user ID**: An alpha-numeric identifier, such as `79a59df900b949e55d96a1e698fbacedfd6e09d98eacf8f8d5218e7cd47ef2be`, that is an obfuscated form of the AWS account ID. You can use this ID to identify an AWS account when granting cross-account access to buckets and objects using Amazon Simple Storage Service (Amazon S3). You can retrieve the canonical user ID for your AWS account as either the root user or an IAM user.
-
-You must be authenticated with AWS to view these identifiers.
-
-#### Warning
-
-**Do not provide your AWS credentials** (including passwords and access keys) to a third party that needs your AWS account identifiers to share AWS resources with you. Doing so would give them the same access to the AWS account that you have.
+- [AWS Documentation](https://docs.aws.amazon.com/)
+- [Getting Started with AWS](https://aws.amazon.com/getting-started/)
+- [AWS Free Tier](https://aws.amazon.com/free/)
+- [AWS Support Plans](https://aws.amazon.com/premiumsupport/plans/)
