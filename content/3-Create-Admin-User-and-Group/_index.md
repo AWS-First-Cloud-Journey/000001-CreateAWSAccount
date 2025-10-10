@@ -1,168 +1,195 @@
 ---
-title : "Create Admin Group and Admin User"
-date : "2025-10-05"
-weight : 3
-chapter : false
-pre : " <b> 3. </b> "
+title: "Create Admin Group and Admin User"
+date: "2025-10-05"
+weight: 3
+chapter: false
+pre: " <b> 3. </b> "
 ---
-## Creating an Admin Group
 
-1. **Log in to the Control Panel** on the [AWS Web Service page](https://aws.amazon.com/).
+#### Create Admin Group
 
-2. Click on your account name at the top right corner and select **My Security Credentials**.
+1. Sign in to AWS Management Console at [https://aws.amazon.com/](https://aws.amazon.com/)
 
-   ![AWS IAM](/images/01/0001.png?featherlight=false&width=90pc)
+2. Click on your account name in the upper right corner and select **My Security Credentials**
 
-   > **Note:** If you don't see the **My Security Credentials** menu, you can click on the search icon and type **IAM**. Then click on the IAM service to access the IAM management interface.
+   ![Access Security Credentials](/images/01/0001.png)
 
-   ![AWS IAM](/images/01/0002.png?featherlight=false&width=90pc)
+   > **Note:** If you don't see the **My Security Credentials** menu, you can search for and select the **IAM** service to access the IAM console.
 
-3. On the left sidebar, choose **User Groups**, and then select **Create Group**.
+   ![Search for IAM service](/images/01/0002.png)
 
-   ![AWS IAM](/images/01/0003.png?featherlight=false&width=90pc)
+3. In the left navigation pane, select **User Groups** and click **Create Group**
 
-4. Under the **Name the group** section, enter the Group name (For example: *AdminGroup*), and scroll down.
+   ![Create User Group](/images/01/0003.png)
 
-   ![AWS IAM](/images/01/0004.png?featherlight=false&width=90pc)
+4. In the **User group name** section, enter a group name (e.g., *AdminGroup*)
 
-5. In the **Attach permissions policies** section, type **AdministratorAccess** in the search bar and select it. Finally, click on **Create Group**.
+   ![Name User Group](/images/01/0004.png)
 
-   ![AWS IAM](/images/01/0005.png?featherlight=false&width=90pc)
+5. In the **Attach permissions policies** section, search for and select the **AdministratorAccess** policy. Then select **Create Group**
 
-6. The creation of the admin group is complete.
+   ![Assign permissions](/images/01/0005.png)
 
-   ![AWS IAM](/images/01/0006.png?featherlight=false&width=90pc)
+6. The group has been created successfully
 
+   ![Complete group creation](/images/01/0006.png)
 
 #### Create Admin User
 
-You can use the AWS Management Console to create IAM users.
+1. In the navigation pane, select **Users** and click **Add users**
 
-1. Follow the sign-in procedure appropriate to your user type as described in the topic [How to sign in to AWS](https://docs.aws.amazon.com/STS/latest/UsingSTS/Welcome.html) in the AWS Sign-In User Guide.
+   ![Create new User](/images/02/0001.png)
 
-2. On the Console Home page, select the **IAM** service.
+2. Configure user information:
+   - Enter **User name** (e.g., *AdminUser*)
+   - Select **AWS Management Console access**
+   - Select **Programmatic access**
+   - Select **Custom password** and enter a password
+   - Uncheck **User must create a new password at next sign-in**
+   - Click **Next: Permissions**
 
-3. In the navigation pane, select **Users**, and then select **Add users**.
+   ![Configure User](/images/02/0002.png)
 
-4. On the **Specify user details** page, under **User details**, enter the new user's name in the **User name** field. This will be their sign-in name for AWS.
+3. Select the **Add user to group** tab and choose the **AdminGroup** you created
 
-   > **Note:** User names can be up to 64 letters, digits, and certain characters: plus (+), equal (=), comma (,), period (.), at sign (@), underscore (_), and hyphen (-). User names must be unique within an account, and they are case-sensitive when used in policies or ARNs. However, they are case-insensitive during the sign-in process.
+   ![Add user to group](/images/02/0003.png)
 
-5. Select **Provide user access to the AWS Management Console**. This generates AWS Management Console sign-in credentials for the new user.
+4. Click **Next: Tags** (Tags are optional for organizing and managing resources)
 
-6. You'll be asked whether you're providing console access to a person. It's recommended to create users in **IAM Identity Center** rather than IAM. To switch to creating the user in IAM Identity Center, select **Specify a user in Identity Center**.
+5. Click **Next: Review**
 
-   - If IAM Identity Center is not enabled, this option takes you to the service page in the console to enable it.
-   - If IAM Identity Center is enabled, this option takes you to the **Specify user details** page in IAM Identity Center.
+   ![Review information](/images/02/0004.png)
 
-   If you cannot use IAM Identity Center, select **I want to create an IAM user** and continue following this procedure.
+6. Review the information and select **Create user**
 
-7. For **Console password**, choose one of the following:
+   ![Confirm user creation](/images/02/0005.png)
 
-   - **Autogenerated password**: The user gets a randomly generated password that adheres to the account password policy. You can view or download the password on the **Retrieve password** page.
-   - **Custom password**: Assign a password that you enter in the box.
+7. Download the .csv file containing the access key (if needed)
 
-   Optionally, select **Users must create a new password at next sign-in (recommended)** to ensure the user changes their password the first time they sign in.
+   ![Download credentials](/images/02/0006.png)
 
-8. Select **Next**.
+8. User has been created successfully
 
-9. On the **Set permissions** page, choose how to assign permissions for this user:
+   ![Complete user creation](/images/02/0007.png)
 
-   - **Add user to group**: Assign the user to one or more groups with existing permissions policies.
-   - **Copy permissions**: Copy permissions from an existing user with similar needs.
-   - **Attach policies directly**: Attach AWS managed or custom policies directly to the user.
+9. View detailed user information
 
-   It's recommended to attach policies to groups whenever possible.
+   ![User details](/images/02/0008.png)
 
-10. Optionally, set a **permissions boundary** in the **Permissions boundary** section. This is an advanced feature that controls maximum permissions.
+> **Note:** After creating the user, AWS will display the access key ID and secret access key. This is important information for accessing AWS through AWS CLI and AWS SDK.
 
-11. Select **Next**.
+#### Sign in with Admin User
 
-12. Optionally, on the **Review and create** page, under **Tags**, you can attach metadata to the user using key-value pairs.
+1. In the IAM console, select **Users** in the navigation pane
+2. Select the IAM user you just created
+3. In the **Security credentials** tab, copy the console sign-in link
 
-13. Review your choices, and when ready, select **Create user**.
+   ![Copy sign-in link](/images/03/0001.png)
 
-14. On the **Retrieve password** page, get the password assigned to the user:
+4. Open a new incognito tab and access the sign-in link
 
-   - Select **Show** next to the password to view it manually.
-   - Select **Download .csv** to save the user's sign-in credentials as a .csv file.
-   - Select **Email sign-in instructions** to customize and send an email to the user. The email includes their user name and a URL to the account sign-in page:
+   ![Access via incognito tab](/images/03/0002.png)
 
-     ```
-     User name
-     URL: https://AWS-account-ID-or-alias.signin.aws.amazon.com/console
-     ```
+5. Enter login information:
+   - IAM user name
+   - Password you created
+   - Click **Sign in**
 
-     Note: The user's password is not included in the email.
+   ![Sign in IAM user](/images/03/0003.png)
 
-If the user also requires access keys, refer to [Managing access keys for IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+6. Successfully signed in with IAM user
 
+   ![Successful sign in](/images/03/0004.png)
 
-#### Login to AdminUser
+#### Reference Documentation
 
-1. Return to the IAM service, and select **Users** in the left sidebar.
-2. Click on the name of the IAM User you just selected.
-3. In the **Summary** section, select the **Security credentials** tab. Look at the line **Summary: Console sign-in link** and copy the link next to it. This is the link you use to log in to the IAM User.
+#### IAM User and AWS Sign-in
 
-![AWS IAM](/images/03/0001.png?featherlight=false&width=90pc)
+An IAM user is an entity created within an AWS account that has permissions to interact with AWS resources. IAM users can sign in using:
+- Account ID/alias
+- User name
+- Password
 
+User names can be regular names (*zhang*) or email addresses (*zhang@example.com*), cannot contain spaces but can contain:
+- Uppercase and lowercase letters
+- Numbers
+- Special characters: + = , . @ _ -
 
-4. Open an incognito tab of the browser you are using and paste the link into the search bar.
+#### Create Access Key for Root User
 
-![AWS IAM](/images/03/0002.png?featherlight=false&width=90pc)
+#### Required Permissions
 
-{{% notice info %}}
-Incognito tab login allows you to log in to AWS with an IAM User without having to log out of the root user in the main tab.
-{{% /notice %}}
+- Must sign in as root user (cannot be performed with IAM user or role)
 
-5. Enter the correct IAM User name and password that you entered in the **create IAM User** section above. Click **sign in**.
+#### Steps to Perform
 
-![AWS IAM](/images/03/0003.png?featherlight=false&width=90pc)
+1. Sign in to AWS Management Console using the root user's email and password
 
-1. Congratulations, you have successfully accessed your account as an IAM User **AdminUser**.
+2. Click on the account name in the upper right corner, select **Security Credentials**
 
+3. In the **Access keys** section, select **Create access key**
 
-![AWS IAM](/images/03/0004.png?featherlight=false&width=90pc)
+   > **Note:** If you don't see this option, you may have reached the access key limit. You need to delete an existing key before creating a new one.
 
+4. On the **Alternatives to root user access keys** page, read the security recommendations. Check the checkbox and select **Create access key**
 
-7. In The next step, we will switch to using IAM Role to improve the security of your account.
+5. On the **Retrieve access key** page:
+   - Access key ID will be displayed
+   - Click **Show** to view the Secret access key
+   - Copy and save both Access key ID and Secret key in a secure location
+   - Or download the rootkey.csv file to save the information
 
+6. Click **Done** to complete
 
-## Creating Access Key for AWS Root User
+> **Recommendation:** Delete or deactivate access keys when no longer in use to ensure security.
 
-### Minimum Required Permissions
+#### Delete Access Key for Root User
 
-To perform the following steps, you need at least the following IAM (Identity and Access Management) permissions:
+#### Required Permissions
 
-- You must log in as the root user of AWS, which does not require any additional IAM permissions. These steps cannot be performed as an IAM user or a role.
+- Must sign in as root user (cannot be performed with IAM user or role)
 
-- Use the email address and password of your AWS account to sign in to the AWS Management Console as the root user.
+#### Steps to Perform
 
-- In the top-right corner of the console, select your account name or number, then choose "Security Credentials".
+1. Sign in to AWS Management Console as root user
 
-- Under "Access keys," select "Create access key." If this option is unavailable, it means you have the maximum number of access keys. You must delete one of the existing access keys before creating a new one. For more information, see IAM Object Quotas in the IAM User Guide.
+2. Click on the account name in the upper right corner, select **Security Credentials**
 
-- On the "Alternatives to root user access keys" page, consider security recommendations. To proceed, check the box and then select "Create access key."
+3. In the **Access keys** section, find the key to delete:
+   - Click **Delete** in the **Actions** menu to permanently delete
+   - Or click **Deactivate** to temporarily disable
 
-- On the "Retrieve access key" page, your Access Key ID will be displayed.
+4. In the confirmation dialog:
+   - Enter the Access key ID to confirm
+   - Click **Delete** to complete
 
-- Under the "Secret access key" section, select "Show," then copy the Access Key ID and Secret Key from your browser window and paste them into a secure location. Alternatively, you can select "Download .csv file" to download a file named "rootkey.csv" containing the Access Key ID and Secret Key. Keep the file in a secure location.
+> **Note about deactivating keys:**
+> - Deactivated keys can be reactivated later
+> - No need to change ID and Secret
+> - API calls using deactivated keys will be rejected with "access denied" error
 
-- Select "Done." When you no longer need the access key, we recommend either deleting it or at least considering disabling it to prevent misuse.
+**Best Practices:**
+- Limit use of root user access keys
+- Create IAM users with appropriate permissions instead of using root user
+- Always secure access key information
+- Delete or deactivate unused keys
+- Regularly rotate access keys
+- Use AWS CloudTrail to monitor access key activity
 
-> Note: These steps apply only to the root user account on AWS. For IAM users or roles, the process of creating and managing access keys may differ.
+#### Multi-Factor Authentication (MFA) Details
 
-## Revoking Access Key for Root User on AWS
+When MFA is enabled, users need to:
+- Sign in normally with username/password
+- Enter authentication code from MFA device
 
-### Minimum Permissions
-To perform the following steps, you must have at least the following IAM (Identity and Access Management) permissions:
+AWS supports these MFA device types:
+- Virtual MFA (Google Authenticator, Authy)
+- Hardware MFA token
+- U2F security key
 
-- You must be logged in as the root user of your AWS account, this does not require any additional AWS Identity and Access Management (IAM) permissions. You cannot perform these steps as an IAM user or a role.
-- Use the email address and password of your AWS account to sign in to the AWS Management Console as the root user.
-- In the top-right corner of the console, select your account name or number, then choose **Security Credentials**.
-- Under **Access keys**, select the access key you wish to delete, then in the **Actions** section, choose **Delete**.
+> **Recommendation:** Enable MFA for both root user and IAM users to enhance security.
 
-> **Note**
-> Alternatively, you can choose to **Deactivate** an access key instead of permanently deleting it. This allows you to continue using it in the future without changing both the key ID and secret key. While the key is deactivated, any requests using it in AWS API requests will fail with an "access denied" error.
->
-> In the **Delete <access key ID>** dialog, select **Deactivate**, enter the access key ID to confirm your intention to delete it, then choose **Delete**.
+Additional References:
+- [IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/)
+- [AWS Security Best Practices](https://aws.amazon.com/security/security-learning/)
+- [AWS CloudTrail Documentation](https://docs.aws.amazon.com/cloudtrail/)
