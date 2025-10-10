@@ -1,13 +1,12 @@
 ---
-title : "Creating Support Cases and Case Management in AWS"
-date :  "2025-10-05" 
-weight : 6
-chapter : false
-pre : " <b> 6. </b> "
+title: "Create and Manage Support Cases in AWS"
+date: "2025-10-05"
+weight: 6
+chapter: false
+pre: " <b> 6. </b> "
 ---
 
-
-#### Creating Support Cases and Case Management in AWS
+#### Create and Manage Support Cases in AWS
 
 This guide covers how to create and manage support cases in AWS, including various case types, severity levels, and the process for handling different support requests.
 
@@ -26,8 +25,8 @@ In the AWS Management Console, you can create three types of customer support ca
 
 **Notes:**
 - To change your support plan, see [Changing AWS Support Plans](https://docs.aws.amazon.com/premiumsupport/latest/user/change-support-plan.html).
-- For account closure, refer to [Closing an Account](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/close-account.html).
-- For common troubleshooting topics, check the [Troubleshooting resources](https://aws.amazon.com/premiumsupport/knowledge-center/).
+- To close your account, refer to [Closing an Account](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/close-account.html).
+- For common troubleshooting topics, check the [troubleshooting resources](https://aws.amazon.com/premiumsupport/knowledge-center/).
 
 #### How to Create a Support Case
 
@@ -60,8 +59,8 @@ In the AWS Management Console, you can create three types of customer support ca
 
 **Notes:**
 - Contact options depend on the case type and support plan.
-- You can discard a support case draft by selecting **Discard draft**.
-- For Business, Enterprise On-Ramp, or Enterprise plans, additional contact options allow you to notify others of status changes.
+- You can cancel a support case draft by selecting **Discard draft**.
+- For Business, Enterprise On-Ramp, or Enterprise Support plans, additional contact options allow you to notify others of status changes.
 
 8. Review your case details and select **Submit**. The case ID and summary will be displayed.
 
